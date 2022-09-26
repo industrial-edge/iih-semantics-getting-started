@@ -100,20 +100,25 @@ This apps allows the configuration of the IIH.
 In your IED clik IIH Configurator to open it.
 
 Go to Aggregate Data -> Connector Configuration and to Connectivity Suite Connectors tab and click inside the box.
+
 ![S7Conf1](graphics/iih_s7_conf1.png)
 
 Add the tags importing the Export.zip file from TIA Portal.
+
 ![S7Conf2](graphics/iih_s7_conf2.png)
 ![S7Conf3](graphics/iih_s7_conf3.png)
 
 It's necessary to edit the data source and add the PLC IP address.
+
 ![S7Conf4](graphics/iih_s7_conf4.png)
 ![S7Conf5](graphics/iih_s7_conf5.png)
 
 Select all the tags needed, choose the Adquisition Cycle, the Access Mode and the Apply.
+
 ![S7Conf6](graphics/iih_s7_conf6.png)
 
 Import and deploy them.
+
 ![S7Conf7](graphics/iih_s7_conf7.png)
 ![S7Conf8](graphics/iih_s7_conf8.png)
 
@@ -132,26 +137,32 @@ We have exported two nodesets, one for the companion specification and other one
 ### Importing Companion Specification in IIH
 Go to IIH Configurator.
 
-In Organize Data -> Mapping & Transformation select Create Model. Then select Add Model
+In Organize Data -> Mapping & Transformation select Create Model. Then select Add Model.
+
 ![IIH_CreateModel](graphics/iih_create_model.png)
 ![IIH_AddModel](graphics/iih_addmodel.png)
 
 Add a companion specification .xml file. The file used in the example is called TankNodeset.xml
+
 ![IIH_LoadCompanionSpec](graphics/iih_load_comp_spec.png)
 
 Load the TankNodeset.xml and select the namespace for the companion specification:
+
 ![IIH_LoadTankCompanion](graphics/iih_load_tanknodeset.png)
 ![IIH_CompSpec_Namespace](graphics/iih_namespace_comp_spec.png)
 
 ### Importing the Information model in IIH
 The model is an instance of the standarized information that is defined in the companion specification
 Add the model.
+
 ![IIH_AddInstance](graphics/iih_addmodel_instance.png)
 
 Load the TankModelNodeset.xml
+
 ![IIH_LoadInstance](graphics/iih_load_instance.png)
 
 Select the namespace for that model.
+
 ![IIH_LoadTankModel](graphics/iih_load_model_nodeset.png)
 ![IIH_model_Namespace](graphics/iih_select_model_namespace.png)
 
