@@ -5,12 +5,12 @@
     - [Option 1: OPC UA Connector](#option1)
     - [Option 2: SIMATIC S7+ Connector](#option2)
   - [Import OPC UA Model](#model-import)
-    - [Connect your Industrial Edge App Publisher](#connect-your-industrial-edge-app-publisher)
-    - [Upload  App using the Industrial Edge App Publisher](#upload--app-using-the-industrial-edge-app-publisher)
-  - [Deploying of App](#deploying-of-app)
-    - [Configuring application](#configuring-application)
-    - [Add additional installation steps here, if required](#add-additional-installation-steps-here-if-required)
-      - [Additional steps](#additional-steps)
+    - [Import a Companion Specification](#import-companion-spec)
+    - [Import the OPC UA model](#import_opcua_model)
+  - [Map the tags](#tags-mapping)
+    - [Option 1: OPC UA Connector](#mapping-option1)
+    - [Option 2: SIMATIC S7+ Connector](#mapping-option2)
+   - [Additional steps](#additional-steps)
   
 ## Configure PLC Connection
 
@@ -119,41 +119,47 @@ Import and deploy them.
 
 ![S7Conf9](graphics/iih_s7_conf9.png)
 
-## Upload  App to the Industrial Edge Managment
+## Import the OPC UA Information model
 
-Please find below a short description how to publish your application in your IEM.
+OPC UA protocol allows companies or organizations to standarize their data for an OPC UA information model. It's possible to generate standarized interfaces for the OPC UA servers, so OPC UA clientes only need to know the information defined in that standard and not taking into account information not relevant.
 
-For more detailed information please see the section for [uploading apps to the IEM](https://github.com/industrial-edge/upload-app-to-iem).
+This standarized interface is called companion specification. There are already many organizations or groups of companies which have already standarized some OPC UA information models for some industries, but a user can also create their own companion specifications.
 
-### Connect your Industrial Edge App Publisher
+In this example we have created a user-defined companion specification for the filling bottle machine and then we have created a model based on that companion specification using Siemens OPC UA modeling Editor (SIOME). 
 
-- Connect your Industrial Edge App Publisher to your docker engine
-- Connect your Industrial Edge App Publisher to your Industrial Edge Managment System
+We have exported two nodesets, one for the companion specification and other one for the model, you can file the files in the folder (src).
 
-### Upload  App using the Industrial Edge App Publisher
+### Importing Companion Specification in IIH
+Go to IIH Configurator.
 
-- Create a new application using the Industrial Publisher
-- Add a app new version
-- Import the [docker-compose](../docker-compose.yml) file using the **Import YAML** button
-- The warning `Build (sevices >> scanner-service) is not supported` can be ignored
-- **Start Upload** to transfer the app to Industrial Edge Managment
-- Further information about using the Industrial Edge App Publisher can be found in the [IE Hub](https://iehub.eu1.edge.siemens.cloud/documents/appPublisher/en/start.html)
+In Organize Data -> Mapping & Transformation select Create Model. Then select Add Model
+![IIH_CreateModel](graphics/iih_create_model.png)
+![IIH_AddModel](graphics/iih_add_model.png)
 
-## Deploying of App
+Add a companion specification .xml file. The file used in the example is called TankNodeset.xml
+![IIH_LoadCompanionSpec](graphics/iih_load_comp_spec.png)
 
-### Configuring application
+Load the TankNodeset.xml and select the namespace for the companion specification:
+![IIH_LoadTankCompanion](graphics/iih_load_tanknodeset.png)
+![IIH_CompSpec_Namespace](graphics/iih_namespace_comp_spec.png)
 
-If your app needs additional configuration you can add further description here, e.g. [param.json](../cfg-data/param.json)
+### Importing the Information model in IIH
+The model is an instance of the standarized information that is defined in the companion specification
+Add the model.
+![IIH_AddInstance](graphics/iih_addmodel_instance.png)
 
-```json
-{
-    "Parameter1": "Siemens AG",
-    "Parameter2": "edge",
-    "Parameter3": "edge"
-}
-```
+Load the TankModelNodeset.xml
+![IIH_LoadInstance](graphics/iih_load_instance.png)
 
-Add description of the configuration here:
+Select the namespace for that model.
+![IIH_LoadTankModel](graphics/iih_load_model_nodeset.png)
+![IIH_model_Namespace](graphics/iih_select_model_namespace.png)
+
+![IIH_model](graphics/iih_information_model.png)
+
+## Map the tags
+
+
 
 ### Add additional installation steps here, if required
 
