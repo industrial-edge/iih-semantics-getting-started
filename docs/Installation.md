@@ -134,7 +134,7 @@ Go to IIH Configurator.
 
 In Organize Data -> Mapping & Transformation select Create Model. Then select Add Model
 ![IIH_CreateModel](graphics/iih_create_model.png)
-![IIH_AddModel](graphics/iih_add_model.png)
+![IIH_AddModel](graphics/iih_addmodel.png)
 
 Add a companion specification .xml file. The file used in the example is called TankNodeset.xml
 ![IIH_LoadCompanionSpec](graphics/iih_load_comp_spec.png)
