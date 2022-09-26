@@ -77,7 +77,7 @@ Go to the settings tab and add the Databus credentials for subscribing and publi
 ![IIH Databus_SubCred](graphics/iih_databus_sub_credentials.png)
 ![IIH Databus_PubCred](graphics/iih_databus_pub_credentials.png)
 
-### Option 2
+### Option 2: SIMATIC S7+ Connector
 
 SIMATIC S7+ Connector reads data from PLC and then IIH app will collect it. We need to export tags from TIA Portal Project using SIMATIC SCADA Export:
 
