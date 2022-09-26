@@ -34,11 +34,11 @@ In your IEM open the IE Databus and launch the configurator.
 
 Add a user with this topic: "ie/#"
 
-[Databus Topic](docs/graphics/databus_topic.png)
+![Databus Topic](graphics/databus_topic.png)
 
 Deploy the configuration.
 
-[Databus Deploy](docs/graphics/databus_deploy.png)
+![Databus Deploy](graphics/databus_deploy.png)
 
 #### Configure the OPC UA Connector
 
@@ -46,15 +46,15 @@ In your IEM open the OPC UA Connector and launch the configurator.
 
 Add a new data source:
 
-[OPCUA DataSource](docs/graphics/opcua_datasource.png)
+![OPCUA DataSource](graphics/opcua_datasource.png)
 
 Add needed tags.
 
-[OPCUA Tags](docs/graphics/opcua_tags.png)
+![OPCUA Tags](graphics/opcua_tags.png)
 
 Edit the settings. Username ad password should be the same as configured in IE Databus configuration.
 
-[OPCUA Settings](docs/graphics/opcua_settings.png)
+![OPCUA Settings](graphics/opcua_settings.png)
 
 Deploy and start the project.
 
@@ -74,8 +74,8 @@ In your IED clik IIH Configurator to open it.
 
 Go to the settings tab and add the Databus credentials for subscribing and publishing topics.
 
-[IIH Databus_SubCred](docs/graphics/iih_databus_sub_credentials.png)
-[IIH Databus_PubCred](docs/graphics/iih_databus_pub_credentials.png)
+![IIH Databus_SubCred](graphics/iih_databus_sub_credentials.png)
+![IIH Databus_PubCred](graphics/iih_databus_pub_credentials.png)
 
 ### Option 2
 
