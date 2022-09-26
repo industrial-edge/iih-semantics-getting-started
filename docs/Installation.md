@@ -79,15 +79,45 @@ Go to the settings tab and add the Databus credentials for subscribing and publi
 
 ### Option 2
 
-SIMATIC S7+ Connector reads data from PLC and then IIH app will collect it.
+SIMATIC S7+ Connector reads data from PLC and then IIH app will collect it. We need to export tags from TIA Portal Project using SIMATIC SCADA Export:
 
-In order to build this infrastructure we need the following connectors and apps:
+![SimaticScadaExport](graphics/simatic_scada_export.png)
+
+A file Export.zip is created.
+
+In order to build this infrastructure we need to have installed the following connectors and apps:
 
 - SIMATIC S7+ Import Converter
+  This apps allows importing tags from the project. ?
 - SIMATIC S7+ Connector
 - IIH Core
 - IIH Configurator
 
+#### Configure IIH Configurator
+
+This apps allows the configuration of the IIH.
+
+In your IED clik IIH Configurator to open it.
+
+Go to Aggregate Data -> Connector Configuration and to Connectivity Suite Connectors tab and click inside the box.
+![S7Conf1](graphics/iih_s7_conf1.png)
+
+Add the tags importing the Export.zip file from TIA Portal.
+![S7Conf2](graphics/iih_s7_conf2.png)
+![S7Conf3](graphics/iih_s7_conf3.png)
+
+It's necessary to edit the data source and add the PLC IP address.
+![S7Conf4](graphics/iih_s7_conf4.png)
+![S7Conf5](graphics/iih_s7_conf5.png)
+
+Select all the tags needed, choose the Adquisition Cycle, the Access Mode and the Apply.
+![S7Conf6](graphics/iih_s7_conf6.png)
+
+Import and deploy them.
+![S7Conf7](graphics/iih_s7_conf7.png)
+![S7Conf8](graphics/iih_s7_conf8.png)
+
+![S7Conf9](graphics/iih_s7_conf9.png)
 
 ## Upload  App to the Industrial Edge Managment
 
