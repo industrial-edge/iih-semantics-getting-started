@@ -35,12 +35,13 @@ Bellow you can find the structure of IE tow-to/tutorial
   - [Documentation](#documentation)
   - [Contribution](#contribution)
   - [License and Legal Information](#license-and-legal-information)
+# IIH Getting Started
 
 ## Description
 
 ### Overview
 
-Why has been this how-to/tutorial created? What is the purpose?
+This application example describes the implementation and usage of the IIH for reading data from a PLC and sharing the data to external application using OPC UA models. The application example is based on the filling bottles example.
 
 ### General Task
 
@@ -52,33 +53,51 @@ What is the general goal/task of this how-to/tutorial?
 
 ### Prerequisites
 
-What are the requirements on the user knowledge, HW components before starting the how-to?
+* Access to an Industrial Edge Management System (IEM)
+* Onboarded Industrial Edge Device on IEM
+* Installed System Configurators for IE Databus and OPC UA Connector
+* Installed System Apps IE Databus and OPC UA Connector
+* Installed Apps SIMATIC S7+ Connector
+* Installed Apps SIMATIC S7+ Import Converter
+* Installed Apps IIH Core
+* Installed Apps IIH Configurator
+* Installed Apps IIH Registry Service
+* Edge device is connected to PLC
+* TIA portal project loaded on PLC (e.g. for filling application) with OPC UA Server activated
+* OPC UA model created with SIOME using a Companion Specifiction
 
 ### Used components
 
-List the used software and hardware components that were tested with this how-to.
-Add the used components here (e.g.)
+* Industrial Edge Management App V1.8.5
+  * IE Databus V1.7.1
+  * IE Databus Configurator V1.7.8
+  * OPC UA Connector V1.8.0
+  * Common Connector Configurator V1.8.0
+  * SIMATIC S7+ Connector V1.1.0
+  * SIMATIC S7+ Import Converter V1.1.0
+  * IIH Core V1.4.0
+  * IIH Configurator V1.4.0
+  * IIH Registry Service V1.4.0
+* Industrial Edge Virtual Device V1.5.0.5-e
+* TIA Portal V17
+* SIMATIC SCADA Export V17
+* PLC: CPU 1513-1 PN FW 2.8
+* Siemens OPC UA modeling Editor (SIOME) V2.5.12
 
-* Industrial Edge App Publisher V1.0.8
-* Docker Engine 18.09.6
-* Docker Compose V2.4
-* S7 Connector V 1.0.22
-* S7 Connector Configurator V 1.0.9
-* Industrial Edge Device V 1.0.0-34
-* TIA Portal V16
-* PLC: CPU 1511 FW 2.8.3
+### TIA Project
+The used TIA Project can be found in the src -file under the following name:
 
-## Installation
+* .7z
 
-How to install/run this application example? (i.e. how to deploy it to Industrial Edge device?) How to build this application? How to set up configurations in IE?
+## Configuration Steps
 
-To keep the readme.md file as short as possible please add more detailed information in the docs folder.
-
-* [Build application](docs/Installation.md#build-application)
+* [Configure PLC Connection](docs/Installation.md#plc-connection)
+* [Import OPC UA Model in IIH](docs/Installation.md#model-import)
+* [Tags Mapping](docs/Installation.md#tags-mapping)
 
 ## Usage
 
-When the app is installed, how can I use it? Usually some basic UI description to prove that the app is working correctly.
+Once the applications is successfully deployed, data from the filling bottle machine is accessible via OPC UA to external OPC UA clients.
 
 ## Documentation
 
