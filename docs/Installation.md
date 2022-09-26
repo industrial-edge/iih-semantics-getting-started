@@ -1,10 +1,10 @@
 # Installation
 
 - [Installation](#installation)
-  - [Build application](#build-application)
-    - [Cloning image](#cloning-image)
-    - [Build docker image](#build-docker-image)
-  - [Upload  App to the Industrial Edge Managment](#upload--app-to-the-industrial-edge-managment)
+  - [Configure PLC Connection](#plc-connection)
+    - [Option 1: OPC UA Connector](#option1)
+    - [Option 2: SIMATIC S7+ Connector](#option2)
+  - [Import OPC UA Model](#model-import)
     - [Connect your Industrial Edge App Publisher](#connect-your-industrial-edge-app-publisher)
     - [Upload  App using the Industrial Edge App Publisher](#upload--app-using-the-industrial-edge-app-publisher)
   - [Deploying of App](#deploying-of-app)
@@ -12,21 +12,82 @@
     - [Add additional installation steps here, if required](#add-additional-installation-steps-here-if-required)
       - [Additional steps](#additional-steps)
   
-## Build application
+## Configure PLC Connection
 
-### Cloning image
+To read data from the PLC and provide the data we will use two options, OPC UA Connector and SIMATIC S7+ Connector.
 
-- Clone or Download the source code to your engineering VM
+### Option 1: OPC UA Connector
 
-### Build docker image
+OPC UA Connector reads data from PLC OPC UA Server and sends data to the IE Databus where the IIH app will collect it.
 
-Add instruction how to build your application, e.g.:
+In order to build this infrastructure we need the following connectors and apps:
 
-- Open console in the source code folder
-- Use command `docker-compose build` to create the docker image.
-- This docker image can now be used to build you app with the Industrial Edge App Publisher
-- *docker images | grep scannerapp* can be used to check for the images
-- You should get a result similiar to this:
+- IE Databus
+- OPC UA Connector
+- IIH Registry Service
+- IIH Core
+- IIH Configurator
+
+#### Configure the IE Databus
+
+In your IEM open the IE Databus and launch the configurator.
+
+Add a user with this topic: "ie/#"
+
+[Databus Topic](docs/graphics/databus_topic.png)
+
+Deploy the configuration.
+
+[Databus Deploy](docs/graphics/databus_deploy.png)
+
+#### Configure the OPC UA Connector
+
+In your IEM open the OPC UA Connector and launch the configurator.
+
+Add a new data source:
+
+[OPCUA DataSource](docs/graphics/opcua_datasource.png)
+
+Add needed tags.
+
+[OPCUA Tags](docs/graphics/opcua_tags.png)
+
+Edit the settings. Username ad password should be the same as configured in IE Databus configuration.
+
+[OPCUA Settings](docs/graphics/opcua_settings.png)
+
+Deploy and start the project.
+
+#### IIH Registry Service
+
+This app needs to be installed on the IED and it allows to the IIH to discover which connectors are sending data through the databus.
+
+#### IIH Core
+
+This app collects data from the different connectors.
+
+#### Configure the IIH Configurator
+
+This apps allows the configuration of the IIH.
+
+In your IED clik IIH Configurator to open it.
+
+Go to the settings tab and add the Databus credentials for subscribing and publishing topics.
+
+[IIH Databus_SubCred](docs/graphics/iih_databus_sub_credentials.png)
+[IIH Databus_PubCred](docs/graphics/iih_databus_pub_credentials.png)
+
+### Option 2
+
+SIMATIC S7+ Connector reads data from PLC and then IIH app will collect it.
+
+In order to build this infrastructure we need the following connectors and apps:
+
+- SIMATIC S7+ Import Converter
+- SIMATIC S7+ Connector
+- IIH Core
+- IIH Configurator
+
 
 ## Upload  App to the Industrial Edge Managment
 
