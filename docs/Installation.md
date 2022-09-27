@@ -23,7 +23,7 @@ SIMATIC S7+ Connector reads data from PLC and then IIH app will collect it. We n
 
 A file **Export.zip** is created. This file is available in [src](../src).
 
-In order to build this infrastructure we need to have installed the following connectors and apps:
+In order to build this infrastructure, we need to have installed the following connectors and apps:
 
 - SIMATIC S7+ Import Converter
 - SIMATIC S7+ Connector
@@ -68,7 +68,7 @@ Select the PLC Connection and then deploy.
 
 OPC UA Connector reads data from PLC OPC UA Server and sends data to the IE Databus where the IIH app will collect it.
 
-In order to build this infrastructure we need the following connectors and apps:
+In order to build this infrastructure, we need the following connectors and apps:
 
 - IE Databus
 - OPC UA Connector
@@ -127,7 +127,7 @@ Go to the settings tab and add the Databus credentials for subscribing and publi
 
 ## Import OPC UA Model
 
-OPC UA protocol allows companies or organizations to standardize their data for an OPC UA information model. It's possible to generate standardized interfaces for the OPC UA servers, so OPC UA clients only need to know the information defined in that standard and not taking into account information not relevant.
+OPC UA protocol allows companies or organizations to standardize their data for an OPC UA information model. It is possible to generate standardized interfaces for the OPC UA servers, so OPC UA clients only need to know the information defined in that standard and not taking into account information not relevant.
 
 This standardized interface is called companion specification. There are already many organizations or groups of companies which have already standardized some OPC UA information models for some industries, but a user can also create their own companion specifications.
 
