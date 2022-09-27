@@ -1,4 +1,4 @@
-# Industrial Information Hub Getting Started
+# Industrial Information Hub (IIH) Getting Started
 
 This repository contains the source files to build the Industrial Information Hub Getting Started example.
 
