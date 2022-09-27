@@ -24,7 +24,7 @@ This application example describes the implementation and usage of the IIH for r
 ![Overview](docs/graphics/overview.png)
 
 ### General Task
-The main goal of the task is to read some relevant data from the PLC and have it accessible to other applications with a standarized model of information using OPC UA Companion Specifications. IIH maps data from PLC to those models and makes data accessible via an OPC UA Server.
+The main goal of the task is to read some relevant data from the PLC and have it accessible to other applications with a standardized model of information using OPC UA Companion Specifications. IIH maps data from PLC to those models and makes data accessible via an OPC UA Server.
 To read data from PLC two options are used: OPC UA Connector (Databus) and SIMATIC S7+ Connector. In this example it is explained how to get the data from those connectors to the IIH.
 
 
@@ -43,7 +43,7 @@ To read data from PLC two options are used: OPC UA Connector (Databus) and SIMAT
 * Installed Apps IIH Registry Service
 * Edge device is connected to PLC
 * TIA portal project loaded on PLC (e.g. for filling application) with OPC UA Server activated
-* OPC UA model created with SiOME using a Companion Specifiction
+* OPC UA model created with SiOME using a Companion Specification
 
 ### Used components
 
@@ -76,7 +76,7 @@ The application example is based on the filling bottles example:
 
 ## Usage
 
-Once the applications is successfully deployed, data from the filling bottle machine is accessible via OPC UA to external OPC UA clients.
+Once the application is successfully deployed, data from the filling bottle machine is accessible via OPC UA to external OPC UA clients.
 
 It is possible to check it using UA Expert tool:
 
