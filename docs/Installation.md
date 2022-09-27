@@ -2,7 +2,7 @@
 
 - [Installation](#installation)
   - [Configure PLC Connection](#configure-plc-connection)
-    - [Option 1: SIMATIC S7+ Connector](#option1)
+    - [Option 1: SIMATIC S7+ Connector](#option-1-simatic-s7-connector)
     - [Option 2: OPC UA Connector](#option2)
   - [Import OPC UA Model](#import-opc-ua-model)
     - [Import a Companion Specification](#import-companion-spec)
