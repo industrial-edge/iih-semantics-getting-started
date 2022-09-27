@@ -131,6 +131,8 @@ This standarized interface is called companion specification. There are already 
 
 In this example we have created a user-defined companion specification for the filling bottle machine and then a model based on this companion specification using Siemens OPC UA modeling Editor (SIOME). 
 
+Further information about using SIOME can be found in the [SIOME](https://support.industry.siemens.com/cs/es/en/view/109755133)
+
 We have exported two nodesets, one for the companion specification and other one for the model, you can file the files:
 
 - [TankNodeset.xml](../src/TankNodeset.xml)
