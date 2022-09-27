@@ -50,7 +50,7 @@ It's necessary to edit the data source and add the **PLC IP address**.
 ![S7Conf4](graphics/iih_s7_conf4.png)
 ![S7Conf5](graphics/iih_s7_conf5.png)
 
-Select all the tags needed, choose the Adquisition Cycle, the Access Mode and the **Apply**.
+Select all the tags needed, choose the Acquisition Cycle, the Access Mode and the **Apply**.
 
 ![S7Conf6](graphics/iih_s7_conf6.png)
 
@@ -108,7 +108,7 @@ Edit the settings. Username and password should be the same as configured in IE 
 
 #### IIH Registry Service
 
-This app needs to be installed on the IED and it allows to the IIH to discover which connectors are sending data to the databus.
+This app needs to be installed on the IED and it allows to the IIH to discover which connectors are sending data to the Databus.
 
 #### IIH Core
 
@@ -182,7 +182,7 @@ Select the namespace for that model.
 ### Option 1: SIMATIC S7+ Connector Mapping
 
 Select **Assigned to OPC UA** and the namespace for the model. 
-Select **Connectivity Suite** as a data source and **SIMATIC S7+ Connector** as the connecotr.
+Select **Connectivity Suite** as a data source and **SIMATIC S7+ Connector** as the connector.
 Drag and drop tags from the connector into the model window.
 
 ![IIH_s7mapping](graphics/iih_s7_mapping.png)
@@ -194,7 +194,7 @@ Drag and drop tags from the connector into the model window.
 ### Option 2: OPC UA Connector Mapping
 
 Select **Assigned to OPC UA** and the namespace for the model. 
-Select **Databus** as a data source and **opcua** as the connecotr.
+Select **Databus** as a data source and **opcua** as the connector.
 Drag and drop tags from the connector into the model window.
 
 ![IIH_opcuamapping](graphics/iih_opcua_mapping.png)
