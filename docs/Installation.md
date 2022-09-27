@@ -138,7 +138,7 @@ We have exported two nodesets, one for the companion specification and other one
 - [TankNodeset.xml](../src/TankNodeset.xml)
 - [TankModelNodeset.xml](../src/TankNodeset.xml)
 
-### Importing Companion Specification in IIH
+### Import a Companion Specification
 
 Go to IIH Configurator.
 
@@ -156,7 +156,7 @@ Load the TankNodeset.xml and select the namespace for the companion specificatio
 ![IIH_LoadTankCompanion](graphics/iih_load_tanknodeset.png)
 ![IIH_CompSpec_Namespace](graphics/iih_namespace_comp_spec.png)
 
-### Importing the Information model in IIH
+### Import the OPC UA model
 
 The model is an instance of the standarized information that is defined in the companion specification.
 
