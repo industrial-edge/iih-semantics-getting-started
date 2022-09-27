@@ -6,7 +6,7 @@
     - [Option 2: OPC UA Connector](#option-2-opc-ua-connector)
   - [Import OPC UA Model](#import-opc-ua-model)
     - [Import a Companion Specification](#import-a-companion-specification)
-    - [Import the OPC UA model](#import-the-opc-ua_model)
+    - [Import the OPC UA model](#import-the-opc-ua-model)
   - [Mapping tags](#mapping-tags)
     - [Option 1: SIMATIC S7+ Connector Mapping](#option-1-simatic-s7-connector-mapping)
     - [Option 2: OPC UA Connector Mapping](#option-2-opc-ua-connector-mapping)
