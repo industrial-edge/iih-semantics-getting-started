@@ -8,8 +8,8 @@
     - [Import a Companion Specification](#import-companion-spec)
     - [Import the OPC UA model](#import_opcua_model)
   - [Mapping tags](#tags-mapping)
-    - [Option 1: OPC UA Connector](#mapping-option1)
-    - [Option 2: SIMATIC S7+ Connector](#mapping-option2)
+    - [Option 1: SIMATIC S7+ Connector](#mapping-option1)
+    - [Option 2: OPC UA Connector](#mapping-option2)
    - [Additional steps](#additional-steps)
   
 ## Configure PLC Connection
@@ -135,6 +135,7 @@ In this example we have created a user-defined companion specification for the f
 We have exported two nodesets, one for the companion specification and other one for the model, you can file the files in the folder (src).
 
 ### Importing Companion Specification in IIH
+
 Go to IIH Configurator.
 
 In Organize Data -> Mapping & Transformation select **Create Model**. Then select **Add Model**.
@@ -152,7 +153,9 @@ Load the TankNodeset.xml and select the namespace for the companion specificatio
 ![IIH_CompSpec_Namespace](graphics/iih_namespace_comp_spec.png)
 
 ### Importing the Information model in IIH
-The model is an instance of the standarized information that is defined in the companion specification
+
+The model is an instance of the standarized information that is defined in the companion specification.
+
 Add the model.
 
 ![IIH_AddInstance](graphics/iih_addmodel_instance.png)
@@ -170,7 +173,27 @@ Select the namespace for that model.
 
 ## Mapping tags
 
+### Option 1: SIMATIC S7+ Connector
 
+Select **Assigned to OPC UA** and the namespace for the model. 
+Select **Connectivity Suite** as a data source and **SIMATIC S7+ Connector** as the connecotr.
+Drag and drop tags from the connector into the model window.
+
+![IIH_s7mapping](graphics/iih_s7_mapping.png)
+
+**Deploy**
+
+![IIH_s7mapping_deploy](graphics/iih_s7_mapping_deploy.png)
+
+### Option 2: OPC UA Connector
+
+Select **Assigned to OPC UA** and the namespace for the model. 
+Select **Databus** as a data source and **opcua** as the connecotr.
+Drag and drop tags from the connector into the model window.
+
+![IIH_opcuamapping](graphics/iih_opcua_mapping.png)
+
+**Deploy**
 
 ### Add additional installation steps here, if required
 
