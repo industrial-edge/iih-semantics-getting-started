@@ -59,7 +59,7 @@ Edit the settings. Username and password should be the same as configured in IE 
 
 #### IIH Registry Service
 
-This app needs to be installed on the IED and it allows to the IIH to discover which connectors are sending data through the databus.
+This app needs to be installed on the IED and it allows to the IIH to discover which connectors are sending data to the databus.
 
 #### IIH Core
 
@@ -86,15 +86,14 @@ A file **Export.zip** is created.
 
 In order to build this infrastructure we need to have installed the following connectors and apps:
 
-- SIMATIC S7+ Import Converter.
-  This apps allows importing tags from the project. ?
+- SIMATIC S7+ Import Converter
 - SIMATIC S7+ Connector
 - IIH Core
 - IIH Configurator
 
 #### Configure IIH Configurator
 
-This apps allows the configuration of the IIH.
+SIMATIC S7+ Import Converter allows theonversion of export file to Connectivity Suite Configuration
 
 In your IED clik IIH Configurator to open it.
 
