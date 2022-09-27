@@ -2,14 +2,14 @@
 
 - [Installation](#installation)
   - [Configure PLC Connection](#plc-connection)
-    -[Option 1: OPC UA Connector](#option1)
-    -[Option 2: SIMATIC S7+ Connector](#option2)
+    - [Option 1: OPC UA Connector](#option1)
+    - [Option 2: SIMATIC S7+ Connector](#option2)
   - [Import OPC UA Model](#model-import)
-    -[Import a Companion Specification](#import-companion-spec)
-    -[Import the OPC UA model](#import_opcua_model)
+    - [Import a Companion Specification](#import-companion-spec)
+    - [Import the OPC UA model](#import_opcua_model)
   - [Mapping tags](#tags-mapping)
-    -[Option 1: SIMATIC S7+ Connector Mapping](#mapping-option1)
-    -[Option 2: OPC UA Connector Mapping](#mapping-option2)
+    - [Option 1: SIMATIC S7+ Connector Mapping](#mapping-option1)
+    - [Option 2: OPC UA Connector Mapping](#mapping-option2)
   
 ## Configure PLC Connection
 
