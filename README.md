@@ -43,7 +43,7 @@ To read data from PLC two options are used: OPC UA Connector (Databus) and SIMAT
 * Installed Apps IIH Registry Service
 * Edge device is connected to PLC
 * TIA portal project loaded on PLC (e.g. for filling application) with OPC UA Server activated
-* OPC UA model created with SIOME using a Companion Specifiction
+* OPC UA model created with SiOME using a Companion Specifiction
 
 ### Used components
 
@@ -61,7 +61,7 @@ To read data from PLC two options are used: OPC UA Connector (Databus) and SIMAT
 * TIA Portal V17
 * SIMATIC SCADA Export V17
 * PLC: CPU 1513-1 PN FW 2.8
-* Siemens OPC UA modeling Editor (SIOME) V2.5.12
+* Siemens OPC UA modeling Editor (SiOME) V2.5.12
 * UA Expert 1.5.1
 
 ### TIA Project
@@ -78,7 +78,7 @@ The application example is based on the filling bottles example:
 
 Once the applications is successfully deployed, data from the filling bottle machine is accessible via OPC UA to external OPC UA clients.
 
-It's possible to check it using UA Expert tool:
+It is possible to check it using UA Expert tool:
 
 ![UA Expert Server Configuration](docs/graphics/uaexpert_server.png)
 
@@ -96,7 +96,7 @@ You can find further documentation and help in the following links
 * [Industrial Edge GitHub page](https://github.com/industrial-edge)
 * [OPC UA Online Reference](https://reference.opcfoundation.org/)
 * [UA_NodeSet](https://github.com/OPCFoundation/UA-Nodeset)
-* [SIOME](https://support.industry.siemens.com/cs/es/en/view/109755133)
+* [SiOME](https://support.industry.siemens.com/cs/es/en/view/109755133)
 
 ## Contribution
 
