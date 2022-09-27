@@ -8,8 +8,8 @@
     - [Import a Companion Specification](#import-companion-spec)
     - [Import the OPC UA model](#import_opcua_model)
   - [Mapping tags](#tags-mapping)
-    - [Option 1: SIMATIC S7+ Connector](#mapping-option1)
-    - [Option 2: OPC UA Connector](#mapping-option2)
+    - [Option 1: SIMATIC S7+ Connector Mapping](#mapping-option1)
+    - [Option 2: OPC UA Connector Mapping](#mapping-option2)
   
 ## Configure PLC Connection
 
@@ -177,7 +177,7 @@ Select the namespace for that model.
 
 ## Mapping tags
 
-### Option 1: SIMATIC S7+ Connector
+### Option 1: SIMATIC S7+ Connector Mapping
 
 Select **Assigned to OPC UA** and the namespace for the model. 
 Select **Connectivity Suite** as a data source and **SIMATIC S7+ Connector** as the connecotr.
@@ -189,7 +189,7 @@ Drag and drop tags from the connector into the model window.
 
 ![IIH_s7mapping_deploy](graphics/iih_s7_mapping_deploy.png)
 
-### Option 2: OPC UA Connector
+### Option 2: OPC UA Connector Mapping
 
 Select **Assigned to OPC UA** and the namespace for the model. 
 Select **Databus** as a data source and **opcua** as the connecotr.
