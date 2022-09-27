@@ -130,9 +130,12 @@ OPC UA protocol allows companies or organizations to standarize their data for a
 
 This standarized interface is called companion specification. There are already many organizations or groups of companies which have already standarized some OPC UA information models for some industries, but a user can also create their own companion specifications.
 
-In this example we have created a user-defined companion specification for the filling bottle machine and then we have created a model based on that companion specification using Siemens OPC UA modeling Editor (SIOME). 
+In this example we have created a user-defined companion specification for the filling bottle machine and then a model based on this companion specification using Siemens OPC UA modeling Editor (SIOME). 
 
-We have exported two nodesets, one for the companion specification and other one for the model, you can file the files in the folder (src).
+We have exported two nodesets, one for the companion specification and other one for the model, you can file the files:
+
+- [TankNodeset.xml](src/TankNodeset.xml)
+- [TankModelNodeset.xml](src/TankNodeset.xml)
 
 ### Importing Companion Specification in IIH
 
