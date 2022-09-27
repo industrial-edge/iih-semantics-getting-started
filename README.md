@@ -19,13 +19,13 @@ This repository contains the source files to build the Industrial Information Hu
 
 ### Overview
 
-This application example describes the implementation and usage of the IIH for reading data from a PLC and sharing the data to external application using OPC UA models. 
+This application example describes the implementation and usage of the IIH for reading data from a PLC and sharing the data to external applications using OPC UA models. 
 
 ![Overview](docs/graphics/overview.png)
 
 ### General Task
 The main goal of the task is to read some relevant data from the PLC and have it accessible to other applications with a standarized model of information using OPC UA Companion Specifications. IIH maps data from PLC to those models and makes data accessible via an OPC UA Server.
-To read data from PLC two options are used: OPC UA Connector (Databus) and SIMATIC S7+ Connector. In this example is explained how to get the data from those connectors to the IIH.
+To read data from PLC two options are used: OPC UA Connector (Databus) and SIMATIC S7+ Connector. In this example it is explained how to get the data from those connectors to the IIH.
 
 
 ## Requirements
@@ -62,6 +62,7 @@ To read data from PLC two options are used: OPC UA Connector (Databus) and SIMAT
 * SIMATIC SCADA Export V17
 * PLC: CPU 1513-1 PN FW 2.8
 * Siemens OPC UA modeling Editor (SIOME) V2.5.12
+* UA Expert 1.5.1
 
 ### TIA Project
 The application example is based on the filling bottles example:
