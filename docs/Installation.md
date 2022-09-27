@@ -32,11 +32,11 @@ In order to build this infrastructure we need the following connectors and apps:
 
 In your IEM open the IE Databus and launch the configurator.
 
-Add a user with this topic: "ie/#"
+Add a user with this topic: <br> `"ie/#"` <br> 
 
 ![Databus Topic](graphics/databus_topic.png)
 
-Deploy the configuration.
+**Deploy** the configuration.
 
 ![Databus Deploy](graphics/databus_deploy.png)
 
@@ -52,11 +52,11 @@ Add needed tags.
 
 ![OPCUA Tags](graphics/opcua_tags.png)
 
-Edit the settings. Username ad password should be the same as configured in IE Databus configuration.
+Edit the settings. Username and password should be the same as configured in IE Databus configuration.
 
 ![OPCUA Settings](graphics/opcua_settings.png)
 
-Deploy and start the project.
+**Deploy** and **start** the project.
 
 #### IIH Registry Service
 
@@ -88,7 +88,6 @@ A file Export.zip is created.
 In order to build this infrastructure we need to have installed the following connectors and apps:
 
 - SIMATIC S7+ Import Converter.
--
   This apps allows importing tags from the project. ?
 - SIMATIC S7+ Connector
 - IIH Core
@@ -100,7 +99,7 @@ This apps allows the configuration of the IIH.
 
 In your IED clik IIH Configurator to open it.
 
-Go to Aggregate Data -> Connector Configuration and to Connectivity Suite Connectors tab and click inside the box.
+Go to **Aggregate Data -> Connector Configuration** and to Connectivity Suite Connectors tab and click inside the box.
 
 ![S7Conf1](graphics/iih_s7_conf1.png)
 
@@ -114,7 +113,7 @@ It's necessary to edit the data source and add the PLC IP address.
 ![S7Conf4](graphics/iih_s7_conf4.png)
 ![S7Conf5](graphics/iih_s7_conf5.png)
 
-Select all the tags needed, choose the Adquisition Cycle, the Access Mode and the Apply.
+Select all the tags needed, choose the Adquisition Cycle, the Access Mode and the **Apply**.
 
 ![S7Conf6](graphics/iih_s7_conf6.png)
 
@@ -138,7 +137,7 @@ We have exported two nodesets, one for the companion specification and other one
 ### Importing Companion Specification in IIH
 Go to IIH Configurator.
 
-In Organize Data -> Mapping & Transformation select Create Model. Then select Add Model.
+In Organize Data -> Mapping & Transformation select **Create Model**. Then select **Add Model**.
 
 ![IIH_CreateModel](graphics/iih_create_model.png)
 ![IIH_AddModel](graphics/iih_addmodel.png)
