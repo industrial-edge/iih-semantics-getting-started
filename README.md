@@ -1,17 +1,32 @@
-# IIH Getting Started
+# Industrial Information Hub Getting Started
 
+This repository contains the source files to build the Industrial Information Hub Getting Started example.
+
+- [Industrial Information Hub Getting Started](#IIH-getting-started)
+  - [Description](#description)
+    - [Overview](#overview)
+    - [General task](#general-task)
+  - [Requirements](#requirements)
+    - [Prerequisites](#prerequisites)
+    - [Used components](#used-components)
+    - [TIA Project](#tia-project)
+  - [Configuration steps](#configuration-steps)
+  - [Usage](#usage)
+  - [Documentation](#documentation)
+  - [Contribution](#contribution)
+  - [License and Legal Information](#license-and-legal-information)
 ## Description
 
 ### Overview
 
 This application example describes the implementation and usage of the IIH for reading data from a PLC and sharing the data to external application using OPC UA models. 
 
+![Overview](docs/graphics/overview.png)
 
 ### General Task
+The main goal of the task is to read some relevant data from the PLC and have it accessible to other applications with a standarized model of information using OPC UA Companion Specifications. IIH maps data from PLC to those models and makes data accessible via an OPC UA Server.
+To read data from PLC two options are used: OPC UA Connector (Databus) and SIMATIC S7+ Connector. In this example is explained how to get the data from those connectors to the IIH.
 
-What is the general goal/task of this how-to/tutorial?
-
-![task](docs/graphics/example_graphic.png)
 
 ## Requirements
 
