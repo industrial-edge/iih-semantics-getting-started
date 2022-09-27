@@ -21,7 +21,7 @@ SIMATIC S7+ Connector reads data from PLC and then IIH app will collect it. We n
 
 ![SimaticScadaExport](graphics/simatic_scada_export.png)
 
-A file **Export.zip** is created.
+A file **Export.zip** is created. This file is available in [src](../src)
 
 In order to build this infrastructure we need to have installed the following connectors and apps:
 
@@ -54,9 +54,12 @@ Select all the tags needed, choose the Adquisition Cycle, the Access Mode and th
 
 ![S7Conf6](graphics/iih_s7_conf6.png)
 
-Import and deploy them.
+Import.
 
 ![S7Conf7](graphics/iih_s7_conf7.png)
+
+Select the PLC Connection and then deploy.
+
 ![S7Conf8](graphics/iih_s7_conf8.png)
 
 ![S7Conf9](graphics/iih_s7_conf9.png)
