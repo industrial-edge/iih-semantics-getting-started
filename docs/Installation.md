@@ -7,7 +7,7 @@
   - [Import OPC UA Model](#model-import)
     - [Import a Companion Specification](#import-companion-spec)
     - [Import the OPC UA model](#import_opcua_model)
-  - [Map the tags](#tags-mapping)
+  - [Mapping tags](#tags-mapping)
     - [Option 1: OPC UA Connector](#mapping-option1)
     - [Option 2: SIMATIC S7+ Connector](#mapping-option2)
    - [Additional steps](#additional-steps)
@@ -87,7 +87,8 @@ A file Export.zip is created.
 
 In order to build this infrastructure we need to have installed the following connectors and apps:
 
-- SIMATIC S7+ Import Converter
+- SIMATIC S7+ Import Converter.
+-
   This apps allows importing tags from the project. ?
 - SIMATIC S7+ Connector
 - IIH Core
@@ -124,7 +125,7 @@ Import and deploy them.
 
 ![S7Conf9](graphics/iih_s7_conf9.png)
 
-## Import the OPC UA Information model
+## Import OPC UA Model
 
 OPC UA protocol allows companies or organizations to standarize their data for an OPC UA information model. It's possible to generate standarized interfaces for the OPC UA servers, so OPC UA clientes only need to know the information defined in that standard and not taking into account information not relevant.
 
@@ -168,7 +169,7 @@ Select the namespace for that model.
 
 ![IIH_model](graphics/iih_information_model.png)
 
-## Map the tags
+## Mapping tags
 
 
 
