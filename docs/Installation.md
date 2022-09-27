@@ -69,7 +69,7 @@ This app collects data from the different connectors.
 
 This apps allows the configuration of the IIH.
 
-In your IED clik IIH Configurator to open it.
+In your IED click IIH Configurator to open it.
 
 Go to the settings tab and add the Databus credentials for subscribing and publishing topics.
 
@@ -93,9 +93,9 @@ In order to build this infrastructure we need to have installed the following co
 
 #### Configure IIH Configurator
 
-SIMATIC S7+ Import Converter allows theonversion of export file to Connectivity Suite Configuration
+SIMATIC S7+ Import Converter converts the export file to Connectivity Suite Configuration
 
-In your IED clik IIH Configurator to open it.
+In your IED click IIH Configurator to open it.
 
 Go to **Aggregate Data -> Connector Configuration** and to Connectivity Suite Connectors tab and click inside the box.
 
@@ -124,15 +124,15 @@ Import and deploy them.
 
 ## Import OPC UA Model
 
-OPC UA protocol allows companies or organizations to standarize their data for an OPC UA information model. It's possible to generate standarized interfaces for the OPC UA servers, so OPC UA clientes only need to know the information defined in that standard and not taking into account information not relevant.
+OPC UA protocol allows companies or organizations to standardize their data for an OPC UA information model. It's possible to generate standardized interfaces for the OPC UA servers, so OPC UA clients only need to know the information defined in that standard and not taking into account information not relevant.
 
-This standarized interface is called companion specification. There are already many organizations or groups of companies which have already standarized some OPC UA information models for some industries, but a user can also create their own companion specifications.
+This standardized interface is called companion specification. There are already many organizations or groups of companies which have already standardized some OPC UA information models for some industries, but a user can also create their own companion specifications.
 
-In this example we have created a user-defined companion specification for the filling bottle machine and then a model based on this companion specification using Siemens OPC UA modeling Editor (SIOME). 
+In this example there was a user-defined companion specification for the filling bottle machine created and then a model based on this companion specification using Siemens OPC UA modeling Editor (SiOME). 
 
-Further information about using SIOME can be found in the [SIOME](https://support.industry.siemens.com/cs/es/en/view/109755133)
+Further information about using SiOME can be found in the [SIOME](https://support.industry.siemens.com/cs/es/en/view/109755133)
 
-We have exported two nodesets, one for the companion specification and other one for the model, you can file the files:
+From SiOME two nodesets were exported, one for the companion specification and other one for the instance model. The files you can find here:
 
 - [TankNodeset.xml](../src/TankNodeset.xml)
 - [TankModelNodeset.xml](../src/TankNodeset.xml)
@@ -157,7 +157,7 @@ Load the TankNodeset.xml and select the namespace for the companion specificatio
 
 ### Import the OPC UA model
 
-The model is an instance of the standarized information that is defined in the companion specification.
+The model is an instance of the standardized information that is defined in the companion specification.
 
 Add the model.
 
