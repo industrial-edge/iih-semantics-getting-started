@@ -10,7 +10,6 @@
   - [Mapping tags](#tags-mapping)
     - [Option 1: SIMATIC S7+ Connector](#mapping-option1)
     - [Option 2: OPC UA Connector](#mapping-option2)
-   - [Additional steps](#additional-steps)
   
 ## Configure PLC Connection
 
@@ -83,7 +82,7 @@ SIMATIC S7+ Connector reads data from PLC and then IIH app will collect it. We n
 
 ![SimaticScadaExport](graphics/simatic_scada_export.png)
 
-A file Export.zip is created.
+A file **Export.zip** is created.
 
 In order to build this infrastructure we need to have installed the following connectors and apps:
 
@@ -108,7 +107,7 @@ Add the tags importing the Export.zip file from TIA Portal.
 ![S7Conf2](graphics/iih_s7_conf2.png)
 ![S7Conf3](graphics/iih_s7_conf3.png)
 
-It's necessary to edit the data source and add the PLC IP address.
+It's necessary to edit the data source and add the **PLC IP address**.
 
 ![S7Conf4](graphics/iih_s7_conf4.png)
 ![S7Conf5](graphics/iih_s7_conf5.png)
@@ -198,8 +197,4 @@ Drag and drop tags from the connector into the model window.
 
 **Deploy**
 
-### Add additional installation steps here, if required
 
-#### Additional steps
-
-Add description here
