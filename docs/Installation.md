@@ -134,8 +134,8 @@ In this example we have created a user-defined companion specification for the f
 
 We have exported two nodesets, one for the companion specification and other one for the model, you can file the files:
 
-- [TankNodeset.xml](src/TankNodeset.xml)
-- [TankModelNodeset.xml](src/TankNodeset.xml)
+- [TankNodeset.xml](../src/TankNodeset.xml)
+- [TankModelNodeset.xml](../src/TankNodeset.xml)
 
 ### Importing Companion Specification in IIH
 
