@@ -62,6 +62,8 @@ The application example is based on the filling bottles example:
 
 Once the applications is successfully deployed, data from the filling bottle machine is accessible via OPC UA to external OPC UA clients.
 
+It's possible to check it using UA Expert tool:
+
 ![UA Expert Server Configuration](docs/graphics/uaexpert_server.png)
 
 ![UA Expert Server Auth](docs/graphics/uaexpert_auth_settings.png)
@@ -70,16 +72,16 @@ Once the applications is successfully deployed, data from the filling bottle mac
 
 ## Documentation
 
-Add links to documentation. Either on external URL or in the doc folder. Please use always link to a file not to a directory (it doesn't work with static site generator engines).
-
-Add these links:
-
 You can find further documentation and help in the following links
 
 * [Industrial Edge Hub](https://iehub.eu1.edge.siemens.cloud/#/documentation)
 * [Industrial Edge Forum](https://www.siemens.com/industrial-edge-forum)
 * [Industrial Edge landing page](https://new.siemens.com/global/en/products/automation/topic-areas/industrial-edge/simatic-edge.html)
 * [Industrial Edge GitHub page](https://github.com/industrial-edge)
+* [OPC UA Online Reference](https://reference.opcfoundation.org/)
+
+* [UA_NodeSet](https://github.com/OPCFoundation/UA-Nodeset)
+* [SIOME](https://support.industry.siemens.com/cs/es/en/view/109755133)
 
 ## Contribution
 
@@ -92,8 +94,3 @@ If you are interested in contributing via Pull Request, please check the [Contri
 
 Please read the [Legal information](LICENSE.txt).
 
-```
-TO BE DELETED: Depending on the content of your repository either choose the
-- LICENSE.md (In case no Source code is included) or the
-- LICENSE.txt file (Source Code is included)
-```
