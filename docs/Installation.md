@@ -90,7 +90,7 @@ Add a user with this topic: <br> `"ie/#"` <br>
 
 #### Configure the OPC UA Connector
 
-In your IEM, go to **Data Connections** launch the **OPC UA Connector configurator**.
+In your IEM, go to **Data Connections** and launch the **OPC UA Connector configurator**.
 
 Add a new data source.
 
