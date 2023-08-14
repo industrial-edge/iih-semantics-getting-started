@@ -17,7 +17,7 @@ To read data from the PLC and provide the data we will use two options, OPC UA C
 
 ### Option 1: SIMATIC S7+ Connector
 
-SIMATIC S7+ Connector reads data from PLC and then IIH app will collect it. We need to export tags from TIA Portal Project using SIMATIC SCADA Export:
+SIMATIC S7+ Connector reads data from PLC and then IIH app will collect it. We need to export tags from TIA Portal Project using SIMATIC SCADA Export.
 
 ![SimaticScadaExport](graphics/simatic_scada_export.png)
 
@@ -36,7 +36,7 @@ SIMATIC S7+ Import Converter converts the export file to Connectivity Suite Conf
 
 In your IED click IIH Configurator to open it.
 
-Go to **Aggregate Data -> Connector Configuration** and to Connectivity Suite Connectors tab and click inside the box.
+Go to **Aggregate Data -> Connector Configuration** and to Connectivity Suite Connectors tab and click inside the **SIMATIC S7+ Connector** box.
 
 ![S7Conf1](graphics/iih_s7_conf1.png)
 
@@ -50,7 +50,7 @@ It's necessary to edit the data source and add the **PLC IP address**.
 ![S7Conf4](graphics/iih_s7_conf4.png)
 ![S7Conf5](graphics/iih_s7_conf5.png)
 
-Select all the tags needed, choose the Acquisition Cycle, the Access Mode and the **Apply**.
+Select all the tags needed, choose the Acquisition Cycle, the Access Mode and click **Apply**.
 
 ![S7Conf6](graphics/iih_s7_conf6.png)
 
@@ -90,9 +90,9 @@ Add a user with this topic: <br> `"ie/#"` <br>
 
 #### Configure the OPC UA Connector
 
-In your IEM open the OPC UA Connector and launch the configurator.
+In your IEM, go to **Data Connections** and launch the **OPC UA Connector configurator**.
 
-Add a new data source:
+Add a new data source.
 
 ![OPCUA DataSource](graphics/opcua_datasource.png)
 
@@ -108,7 +108,7 @@ Edit the settings. Username and password should be the same as configured in IE 
 
 #### IIH Registry Service
 
-This app needs to be installed on the IED and it allows to the IIH to discover which connectors are sending data to the Databus.
+This app needs to be installed on the IED. It allows to the IIH to discover which connectors are sending data to the Databus.
 
 #### IIH Core
 
@@ -129,13 +129,13 @@ Go to the settings tab and add the Databus credentials for subscribing and publi
 
 OPC UA protocol allows companies or organizations to standardize their data for an OPC UA information model. It is possible to generate standardized interfaces for the OPC UA servers, so OPC UA clients only need to know the information defined in that standard and not taking into account information not relevant.
 
-This standardized interface is called companion specification. There are already many organizations or groups of companies which have already standardized some OPC UA information models for some industries, but a user can also create their own companion specifications.
+This standardized interface is called companion specification. There are already many organizations or groups of companies which have standardized some OPC UA information models for some industries, but a user can also create their own companion specifications.
 
-In this example there was a user-defined companion specification for the filling bottle machine created and then a model based on this companion specification using Siemens OPC UA modeling Editor (SiOME). 
+In this example, a user-defined companion specification for the filling bottle machine was created and then used as a basis for a data model using Siemens OPC UA modeling Editor (SiOME). 
 
-Further information about using SiOME can be found in the [SiOME](https://support.industry.siemens.com/cs/es/en/view/109755133)
+Further information about using SiOME can be found on the [SiOME support page](https://support.industry.siemens.com/cs/es/en/view/109755133)
 
-From SiOME two nodesets were exported, one for the companion specification and other one for the instance model. The files you can find here:
+From SiOME, two nodesets were exported, one for the companion specification and another one for the instance model. The files can be found here:
 
 - [TankNodeset.xml](../src/TankNodeset.xml)
 - [TankModelNodeset.xml](../src/TankModelNodeset.xml)
@@ -181,9 +181,9 @@ Select the namespace for that model.
 
 ### Option 1: SIMATIC S7+ Connector Mapping
 
-Select **Assigned to OPC UA** and the namespace for the model. 
+Select **Assigned to OPC UA** and the namespace for the model in the respective dropdown menus. 
 Select **Connectivity Suite** as a data source and **SIMATIC S7+ Connector** as the connector.
-Drag and drop tags from the connector into the model window.
+Drag and drop tags from the **Tags**-window into the OPC UA model.
 
 ![IIH_s7mapping](graphics/iih_s7_mapping.png)
 
@@ -193,9 +193,9 @@ Drag and drop tags from the connector into the model window.
 
 ### Option 2: OPC UA Connector Mapping
 
-Select **Assigned to OPC UA** and the namespace for the model. 
-Select **Databus** as a data source and **opcua** as the connector.
-Drag and drop tags from the connector into the model window.
+Select **Assigned to OPC UA** and the namespace for the model in the respective dropdown menus.  
+Select **Databus** as data source and **opcua** as the connector.
+Drag and drop tags from the **Tags**-window into the OPC UA model.
 
 ![IIH_opcuamapping](graphics/iih_opcua_mapping.png)
 
