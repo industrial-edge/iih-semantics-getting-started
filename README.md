@@ -87,10 +87,13 @@ Once the application is successfully deployed, data from the filling bottle mach
 
 It is possible to check that using the UA Expert tool:
 
+1. Connect to port `62520` of your IED to reach the IIH OPC UA Server  
 ![UA Expert Server Configuration](docs/graphics/uaexpert_server.png)
 
+2. Authenticate with default username `iihcore` and password `iihcore`  
 ![UA Expert Server Auth](docs/graphics/uaexpert_auth_settings.png)
 
+3. Browse the OPC UA Server Model and display data  
 ![UA Expert Browse](docs/graphics/uaexpert_browse.png)
 
 ## Documentation
