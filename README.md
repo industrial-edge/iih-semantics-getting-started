@@ -52,24 +52,27 @@ In this example it is explained how to get the data from those connectors to the
 
 ### Used components
 
-* Installed Apps:
-  * Industrial Edge Management App V1.13.10
-  * IE Databus V2.2.0
-  * IE Databus Configurator V2.2.0
-  * OPC UA Connector V1.8.1
-  * Common Connector Configurator V1.8.2
-  * SIMATIC S7+ Connector V1.2.0
-  * SIMATIC S7+ Import Converter V1.2.0
-  * IIH Core V1.6.1
-  * IIH Configurator V1.6.1
-  * IIH Registry Service V1.6.1
-  * Data Service V1.7.0
-* Industrial Edge Virtual Device V1.12.0.3-a
-* TIA Portal V17
-* SIMATIC SCADA Export V17
-* PLC: CPU 1513-1 PN FW 2.8
+TIA and PLC:
+* TIA Portal V16
+* PLC: CPU 1511 FW 2.8.3
+* SIMATIC SCADA Export V16
 * Siemens OPC UA modeling Editor (SiOME) V2.5.12
 * UA Expert 1.5.1
+  
+Industrial Edge:
+* Industrial Edge Management App V1.13.10
+* IE Databus V2.2.0
+* IE Databus Configurator V2.2.0
+* OPC UA Connector V1.8.1
+* Common Connector Configurator V1.8.2
+* SIMATIC S7+ Connector V1.2.0
+* SIMATIC S7+ Import Converter V1.2.0
+* IIH Core V1.6.1
+* IIH Configurator V1.6.1
+* IIH Registry Service V1.6.1
+* Data Service V1.7.0
+* Industrial Edge Virtual Device V1.12.0.3-a
+
 
 ### TIA Project
 The application example is based on the filling bottles example:

@@ -1,9 +1,16 @@
 # Installation
 
 - [Installation](#installation)
+  - [Configure PLCs with TIA Portal](#configure-plcs-with-tia-portal)
   - [Configure PLC Connection](#configure-plc-connection)
     - [Option 1: SIMATIC S7+ Connector](#option-1-simatic-s7-connector)
+      - [Configure IIH Configurator](#configure-iih-configurator)
     - [Option 2: OPC UA Connector](#option-2-opc-ua-connector)
+      - [Configure the IE Databus](#configure-the-ie-databus)
+      - [Configure the OPC UA Connector](#configure-the-opc-ua-connector)
+      - [IIH Registry Service](#iih-registry-service)
+      - [IIH Core](#iih-core)
+      - [Configure the IIH Configurator](#configure-the-iih-configurator)
   - [Import OPC UA Model](#import-opc-ua-model)
     - [Import a Companion Specification](#import-a-companion-specification)
     - [Import the OPC UA model](#import-the-opc-ua-model)
@@ -11,9 +18,13 @@
     - [Option 1: SIMATIC S7+ Connector Mapping](#option-1-simatic-s7-connector-mapping)
     - [Option 2: OPC UA Connector Mapping](#option-2-opc-ua-connector-mapping)
   
+## Configure PLCs with TIA Portal
+
+For this tutorial 3 PLCs will be used that each demonstrate one line of a production plant. The TIA project can be found [here]([src/tiaproject.zap16](https://github.com/industrial-edge/miscellaneous/blob/main/tank%20application/tia-tank-application.zap16)). Please adjust the IP adresses to your enviroment, download the project to three PLCs and start them up. A simulation of a filling line will be excecuted automatically.
+
 ## Configure PLC Connection
 
-To read data from the PLC and provide the data we will use two options, OPC UA Connector and SIMATIC S7+ Connector.
+To get the relevant data from the PLCs to the Edge Device there are several Connectors available. The IIH forms a central integration layer where all connector data can be standardized and mapped on a data model. For this example we will use two options, OPC UA Connector and SIMATIC S7+ Connector.
 
 ### Option 1: SIMATIC S7+ Connector
 
@@ -32,36 +43,27 @@ In order to build this infrastructure, we need to have installed the following c
 
 #### Configure IIH Configurator
 
-SIMATIC S7+ Import Converter converts the export file to Connectivity Suite Configuration
+SIMATIC S7+ Import Converter converts the export file to a Connectivity Suite Configuration.
 
 In your IED click IIH Configurator to open it.
 
-Go to **Aggregate Data -> Connector Configuration** and to Connectivity Suite Connectors tab and click inside the **SIMATIC S7+ Connector** box.
-
+1. Go to **Get Data -> Connector Configuration** and click inside the **SIMATIC S7+ Connector** box.  
 ![S7Conf1](graphics/iih_s7_conf1.png)
 
-Add the tags importing the Export.zip file from TIA Portal.
-
+2. Add the tags by importing the Export.zip file from TIA Portal.  
 ![S7Conf2](graphics/iih_s7_conf2.png)
 ![S7Conf3](graphics/iih_s7_conf3.png)
 
-It's necessary to edit the data source and add the **PLC IP address**.
-
+3. After importing the file make sure to set the **PLC IP address** correctly.  
 ![S7Conf4](graphics/iih_s7_conf4.png)
-![S7Conf5](graphics/iih_s7_conf5.png)
 
-Select all the tags needed, choose the Acquisition Cycle, the Access Mode and click **Apply**.
-
+4. Select all the tags needed, choose the Acquisition Cycle, the Access Mode and click **Apply** and then **Import**.  
 ![S7Conf6](graphics/iih_s7_conf6.png)
 
-Import.
-
-![S7Conf7](graphics/iih_s7_conf7.png)
-
-Select the PLC Connection and then deploy.
-
+5. Select the PLC Connection and then deploy.  
 ![S7Conf8](graphics/iih_s7_conf8.png)
 
+6. Monitor the connection status in the **Connector Configuration** tab 
 ![S7Conf9](graphics/iih_s7_conf9.png)
 
 ### Option 2: OPC UA Connector
