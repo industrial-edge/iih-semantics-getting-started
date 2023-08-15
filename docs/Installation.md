@@ -9,7 +9,6 @@
       - [Configure the IE Databus](#configure-the-ie-databus)
       - [Configure the OPC UA Connector](#configure-the-opc-ua-connector)
       - [IIH Registry Service](#iih-registry-service)
-      - [IIH Core](#iih-core)
       - [Configure the IIH Configurator](#configure-the-iih-configurator)
   - [Import OPC UA Model](#import-opc-ua-model)
     - [Import a Companion Specification](#import-a-companion-specification)
@@ -80,50 +79,43 @@ In order to build this infrastructure, we need the following connectors and apps
 
 #### Configure the IE Databus
 
-In your IEM open the IE Databus and launch the configurator.
+1. Go on you IEM and open the Databus Configurator in the **Data Connections** section
+   
+2. Create a new user and assign the topic `ie/#`  
+![DatabusConfig](graphics/DatabusConfig.png)
 
-Add a user with this topic: <br> `"ie/#"` <br> 
-
-![Databus Topic](graphics/databus_topic.png)
-
-**Deploy** the configuration.
-
-![Databus Deploy](graphics/databus_deploy.png)
+3. **Deploy** the configuration.
 
 #### Configure the OPC UA Connector
 
-In your IEM, go to **Data Connections** and launch the **OPC UA Connector configurator**.
+1. In your IEM, go to **Data Connections** and launch the **OPC UA Connector configurator**.
 
-Add a new data source.
+2. Go to the settings menu, where you can fill in the Databus user you just created:   
+   ![OPCUAConfig1](graphics/OPCUAConfig1.png)
 
+3. Add a new data source.  
 ![OPCUA DataSource](graphics/opcua_datasource.png)
 
-Add needed tags.
-
+4. After adding the PLC, click on the browse symbol and add the following variables to your configuration:  
 ![OPCUA Tags](graphics/opcua_tags.png)
 
-Edit the settings. Username and password should be the same as configured in IE Databus configuration.
+5. Repeat step 3. and 4. for another PLC (Example Data Model consists of 3 PLCs in total)
 
-![OPCUA Settings](graphics/opcua_settings.png)
+6. **Deploy** and **start** the project.
 
-**Deploy** and **start** the project.
+If you don't want to perform all these steps manually, you can import this [configuration file](../src/opcuaconnector.json).
 
 #### IIH Registry Service
 
 This app needs to be installed on the IED. It allows to the IIH to discover which connectors are sending data to the Databus.
 
-#### IIH Core
-
-This app collects data from the different connectors.
-
 #### Configure the IIH Configurator
 
-This apps allows the configuration of the IIH.
+This apps allows the configuration of the IIH. 
 
-In your IED click IIH Configurator to open it.
+1. In your IED click IIH Configurator to open it.
 
-Go to the settings tab and add the Databus credentials for subscribing and publishing topics.
-
+2. Go to the settings tab and add the Databus credentials for subscribing and publishing topics.  
 ![IIH Databus_SubCred](graphics/iih_databus_sub_credentials.png)
 ![IIH Databus_PubCred](graphics/iih_databus_pub_credentials.png)
 
