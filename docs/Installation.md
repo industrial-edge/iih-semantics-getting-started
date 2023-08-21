@@ -117,7 +117,7 @@ This apps allows the configuration of the IIH.
 
 2. Go to the settings tab and add the Databus credentials for subscribing and publishing topics.  
 ![IIH Databus_SubCred](graphics/iih_databus_sub_credentials.png)
-![IIH Databus_PubCred](graphics/iih_databus_pub_credentials.png)
+
 
 ## Import OPC UA Model
 
@@ -138,38 +138,35 @@ From SiOME, two nodesets were exported, one for the companion specification and 
 
 Go to IIH Configurator.
 
-In **Organize Data -> Mapping & Transformation** select **Create Model**. Then select **Add Model**.
-
+1. In **Define Data -> Organize** select **Create Model**. Then select **Add Model**.  
 ![IIH_CreateModel](graphics/iih_create_model.png)
-![IIH_AddModel](graphics/iih_addmodel.png)
 
-Add a companion specification .xml file. The file used in the example is called TankNodeset.xml
-
+2. Add a companion specification .xml file. The file used in the example is called TankNodeset.xml  
 ![IIH_LoadCompanionSpec](graphics/iih_load_comp_spec.png)
 
-Load the TankNodeset.xml and select the namespace for the companion specification:
-
-![IIH_LoadTankCompanion](graphics/iih_load_tanknodeset.png)
+3. Load the TankNodeset.xml and select the namespace for the companion specification:  
 ![IIH_CompSpec_Namespace](graphics/iih_namespace_comp_spec.png)
 
 ### Import the OPC UA model
 
 The model is an instance of the standardized information that is defined in the companion specification.
 
-Add the model.
-
+1. Select **Add model** again.  
 ![IIH_AddInstance](graphics/iih_addmodel_instance.png)
 
-Load the TankModelNodeset.xml
-
+2. Load the TankModelNodeset.xml  
 ![IIH_LoadInstance](graphics/iih_load_instance.png)
 
-Select the namespace for that model.
-
-![IIH_LoadTankModel](graphics/iih_load_model_nodeset.png)
+3. Select the namespace for that model.  
 ![IIH_model_Namespace](graphics/iih_select_model_namespace.png)
 
-![IIH_model](graphics/iih_information_model.png)
+4. After both files are imported you need to create a new asset in the right editor window  
+![AddParentAsset](graphics/AddParentAsset.png)
+
+5. Then you can map the imported OPC UA model to that asset per drag and drop  
+![MapOPCtoAsset](graphics/MapOPCtoAsset.png)
+
+You have successfully created a data model based on OPC UA. This model will be the central information layer for all your applications. The next step is to map connector variables to it, to fill the model with data.
 
 ## Mapping tags
 
