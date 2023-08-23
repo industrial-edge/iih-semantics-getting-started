@@ -16,6 +16,7 @@
   - [Mapping tags](#mapping-tags)
     - [Option 1: SIMATIC S7+ Connector Mapping](#option-1-simatic-s7-connector-mapping)
     - [Option 2: OPC UA Connector Mapping](#option-2-opc-ua-connector-mapping)
+  - [Creating Asset Model](#creating-asset-model)
   
 ## Configure PLCs with TIA Portal
 
@@ -116,7 +117,7 @@ This apps allows the configuration of the IIH.
 1. In your IED click IIH Configurator to open it.
 
 2. Go to the settings tab and add the Databus credentials for subscribing and publishing topics.  
-![IIH Databus_SubCred](graphics/iih_databus_sub_credentials.png)
+![IIH Databus_PubCred](graphics/iih_databus_pub_credentials.png)
 
 
 ## Import OPC UA Model
@@ -160,36 +161,37 @@ The model is an instance of the standardized information that is defined in the 
 3. Select the namespace for that model.  
 ![IIH_model_Namespace](graphics/iih_select_model_namespace.png)
 
-4. After both files are imported you need to create a new asset in the right editor window  
-![AddParentAsset](graphics/AddParentAsset.png)
-
-5. Then you can map the imported OPC UA model to that asset per drag and drop  
-![MapOPCtoAsset](graphics/MapOPCtoAsset.png)
-
-You have successfully created a data model based on OPC UA. This model will be the central information layer for all your applications. The next step is to map connector variables to it, to fill the model with data.
+You have successfully created a data model based on OPC UA. The next step is to map connector variables to it, to fill the model with data.
 
 ## Mapping tags
 
 ### Option 1: SIMATIC S7+ Connector Mapping
 
-Select **Assigned to OPC UA** and the namespace for the model in the respective dropdown menus. 
-Select **Connectivity Suite** as a data source and **SIMATIC S7+ Connector** as the connector.
-Drag and drop tags from the **Tags**-window into the OPC UA model.
-
+1. Select **OPC UA** and the namespace for the model in the respective dropdown menus on the right side of the window.  
+   
+2. On the left ide you should see the **Data Sources**. Select **SIMATIC S7+ Connector** from the dropdown menu.  
+   
+3. Drag and drop tags from the left window into the OPC UA model.  
 ![IIH_s7mapping](graphics/iih_s7_mapping.png)
 
-**Deploy**
-
+4. **Deploy**  
 ![IIH_s7mapping_deploy](graphics/iih_s7_mapping_deploy.png)
 
 ### Option 2: OPC UA Connector Mapping
 
-Select **Assigned to OPC UA** and the namespace for the model in the respective dropdown menus.  
-Select **Databus** as data source and **opcua** as the connector.
-Drag and drop tags from the **Tags**-window into the OPC UA model.
+1. Follow the same procedure as for [Option 1](#option-1-simatic-s7-connector-mapping), while selecting 'opcuac1' from the connector dropdown menu:  
+  ![IIH_opcuamapping](graphics/iih_opcua_mapping.png)
 
-![IIH_opcuamapping](graphics/iih_opcua_mapping.png)
+2. **Deploy**
 
-**Deploy**
+## Creating Asset Model
 
+To make use of the full functionality of IIH your OPC UA model has to be mapped to an **Asset Model**. This is the data model structure which is used by several apps like Perfomance Insight or Energy Manager.
 
+1. Select **Asset Model** in the right editor window and create a new asset 
+![AddParentAsset](graphics/AddParentAsset.png)
+
+1. Then you can map the OPC UA model to that asset per drag and drop  
+![MapOPCtoAsset](graphics/MapOPCtoAsset.png)
+
+This model will be the central information layer for all your applications.
