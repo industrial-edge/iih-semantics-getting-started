@@ -20,7 +20,7 @@
   
 ## Configure PLCs with TIA Portal
 
-For this tutorial two PLCs will be used that each demonstrate one line of a production plant. The TIA project can be found [here]([src/tiaproject.zap16](https://github.com/industrial-edge/miscellaneous/blob/main/tank%20application/tia-tank-application.zap16)). Please adjust the IP adresses to your enviroment, download the project to two PLCs and start them up. A simulation of a filling line will be excecuted automatically.
+For this tutorial two PLCs will be used that each demonstrate one line of a production plant. The TIA project can be found [here](https://github.com/industrial-edge/miscellaneous/blob/main/tank%20application/tia-tank-application.zap16). Please adjust the IP adresses to your enviroment, download the project to two PLCs and start them up. A simulation of a filling line will be excecuted automatically.
 
 ## Configure PLC Connection
 
@@ -193,4 +193,4 @@ To make use of the full functionality of IIH, your OPC UA model has to be mapped
 1. Then you can map the OPC UA model to that asset per drag and drop  
 ![MapOPCtoAsset](graphics/MapOPCtoAsset.png)
 
-This model will be the central information layer for all your applications.
+This model will be the central information layer for all your applications. By using an asset model you are also able to activate the **Storage** and **Cloud Sync** feature for your tags.
