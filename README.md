@@ -57,7 +57,7 @@ TIA and PLC:
 * PLC: CPU 1511 FW 2.8.3
 * SIMATIC SCADA Export V16
 * Siemens OPC UA modeling Editor (SiOME) V2.5.12
-* UA Expert 1.5.1
+* UA Expert 1.6.3
   
 Industrial Edge:
 * Industrial Edge Management App V1.13.10
@@ -80,9 +80,11 @@ The application example is based on the filling bottles example:
 
 ## Configuration Steps
 
-* [Configure PLC Connection](docs/Installation.md#plc-connection)
-* [Import OPC UA Model in IIH](docs/Installation.md#model-import)
-* [Tags Mapping](docs/Installation.md#tags-mapping)
+* [Configure PLCs](docs/Installation.md#configure-plcs-with-tia-portal)
+* [Configure PLC Connections](docs/Installation.md#configure-plc-connection)
+* [Import OPC UA Model in IIH](docs/Installation.md#import-opc-ua-model)
+* [Tags Mapping](docs/Installation.md#mapping-tags)
+* [Creating Asset Model](docs/Installation.md#creating-asset-model)
 
 ## Usage
 
@@ -114,6 +116,7 @@ You can find further documentation and help in the following links
 ## Contribution
 
 Thank you for your interest in contributing. Anybody is free to report bugs, unclear documentation, and other problems regarding this repository in the Issues section.
+
 Additionally everybody is free to propose any changes to this repository using Pull Requests.
 
 If you are interested in contributing via Pull Request, please check the [Contribution License Agreement](Siemens_CLA_1.1.pdf) and forward a signed copy to [industrialedge.industry@siemens.com](mailto:industrialedge.industry@siemens.com?subject=CLA%20Agreement%20Industrial-Edge).

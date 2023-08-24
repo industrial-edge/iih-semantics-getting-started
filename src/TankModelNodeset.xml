@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<UANodeSet LastModified="2023-08-21T13:24:40.303Z" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd" xmlns:uax="http://opcfoundation.org/UA/2008/02/Types.xsd" xmlns:si="http://www.siemens.com/OPCUA/2017/SimaticNodeSetExtensions" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<UANodeSet LastModified="2023-08-24T12:23:34.056Z" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd" xmlns:uax="http://opcfoundation.org/UA/2008/02/Types.xsd" xmlns:si="http://www.siemens.com/OPCUA/2017/SimaticNodeSetExtensions" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
     <NamespaceUris>
         <Uri>http://www.siemens.com/machine/</Uri>
         <Uri>http://www.siemens.com/machine/demo</Uri>
@@ -32,7 +32,7 @@
             <si:Generator Product="SiOME" Edition="Standard" Version="2.5.0"/>
         </Extension>
         <Extension>
-            <si:GeneratorExtension Hash="e3341679eba0fe2e5797b2e379ac76d6"/>
+            <si:GeneratorExtension Hash="a4b227052a635ddfb2ee8cbed99f511a"/>
         </Extension>
     </Extensions>
     <UAObject SymbolicName="http___www_siemens_com_machine_tank" NodeId="ns=1;i=5000" BrowseName="1:http://www.siemens.com/machine/" ParentNodeId="i=11715">
@@ -906,167 +906,6 @@
         <DisplayName>FillingTank</DisplayName>
         <References>
             <Reference ReferenceType="HasComponent" IsForward="false">ns=2;i=5016</Reference>
-            <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
-        </References>
-    </UAVariable>
-    <UAObject NodeId="ns=2;i=5018" BrowseName="2:Line3" ParentNodeId="i=85">
-        <DisplayName>Line3</DisplayName>
-        <References>
-            <Reference ReferenceType="Organizes" IsForward="false">i=85</Reference>
-            <Reference ReferenceType="HasTypeDefinition">ns=1;i=1004</Reference>
-        </References>
-    </UAObject>
-    <UAObject NodeId="ns=2;i=5019" BrowseName="1:MachineConsumption" ParentNodeId="ns=2;i=5018">
-        <DisplayName>MachineConsumption</DisplayName>
-        <References>
-            <Reference ReferenceType="Organizes" IsForward="false">ns=2;i=5018</Reference>
-            <Reference ReferenceType="HasTypeDefinition">ns=1;i=1005</Reference>
-        </References>
-    </UAObject>
-    <UAObject NodeId="ns=2;i=5020" BrowseName="1:OperateSignals" ParentNodeId="ns=2;i=5018">
-        <DisplayName>OperateSignals</DisplayName>
-        <References>
-            <Reference ReferenceType="Organizes" IsForward="false">ns=2;i=5018</Reference>
-            <Reference ReferenceType="HasTypeDefinition">ns=1;i=1008</Reference>
-        </References>
-    </UAObject>
-    <UAObject NodeId="ns=2;i=5021" BrowseName="1:ProcessSignals" ParentNodeId="ns=2;i=5018">
-        <DisplayName>ProcessSignals</DisplayName>
-        <References>
-            <Reference ReferenceType="Organizes" IsForward="false">ns=2;i=5018</Reference>
-            <Reference ReferenceType="HasTypeDefinition">ns=1;i=1007</Reference>
-        </References>
-    </UAObject>
-    <UAObject NodeId="ns=2;i=5022" BrowseName="1:TankSignals" ParentNodeId="ns=2;i=5018">
-        <DisplayName>TankSignals</DisplayName>
-        <References>
-            <Reference ReferenceType="Organizes" IsForward="false">ns=2;i=5018</Reference>
-            <Reference ReferenceType="HasTypeDefinition">ns=1;i=1001</Reference>
-        </References>
-    </UAObject>
-    <UAObject NodeId="ns=2;i=5023" BrowseName="1:Energy" ParentNodeId="ns=2;i=5019">
-        <DisplayName>Energy</DisplayName>
-        <References>
-            <Reference ReferenceType="Organizes" IsForward="false">ns=2;i=5019</Reference>
-            <Reference ReferenceType="HasTypeDefinition">ns=1;i=1002</Reference>
-        </References>
-    </UAObject>
-    <UAObject NodeId="ns=2;i=5024" BrowseName="1:Gas" ParentNodeId="ns=2;i=5019">
-        <DisplayName>Gas</DisplayName>
-        <References>
-            <Reference ReferenceType="Organizes" IsForward="false">ns=2;i=5019</Reference>
-            <Reference ReferenceType="HasTypeDefinition">ns=1;i=1006</Reference>
-        </References>
-    </UAObject>
-    <UAObject NodeId="ns=2;i=5025" BrowseName="1:Water" ParentNodeId="ns=2;i=5019">
-        <DisplayName>Water</DisplayName>
-        <References>
-            <Reference ReferenceType="Organizes" IsForward="false">ns=2;i=5019</Reference>
-            <Reference ReferenceType="HasTypeDefinition">ns=1;i=1003</Reference>
-        </References>
-    </UAObject>
-    <UAVariable DataType="Int16" NodeId="ns=2;i=6038" BrowseName="1:OperateState" ParentNodeId="ns=2;i=5020" UserAccessLevel="3" AccessLevel="3">
-        <DisplayName>OperateState</DisplayName>
-        <References>
-            <Reference ReferenceType="HasComponent" IsForward="false">ns=2;i=5020</Reference>
-            <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
-        </References>
-    </UAVariable>
-    <UAVariable DataType="UInt32" NodeId="ns=2;i=6039" BrowseName="1:BatchID" ParentNodeId="ns=2;i=5021" UserAccessLevel="3" AccessLevel="3">
-        <DisplayName>BatchID</DisplayName>
-        <References>
-            <Reference ReferenceType="HasComponent" IsForward="false">ns=2;i=5021</Reference>
-            <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
-        </References>
-    </UAVariable>
-    <UAVariable DataType="UInt32" NodeId="ns=2;i=6040" BrowseName="1:NumberFaulty" ParentNodeId="ns=2;i=5021" UserAccessLevel="3" AccessLevel="3">
-        <DisplayName>NumberFaulty</DisplayName>
-        <References>
-            <Reference ReferenceType="HasComponent" IsForward="false">ns=2;i=5021</Reference>
-            <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
-        </References>
-    </UAVariable>
-    <UAVariable DataType="UInt32" NodeId="ns=2;i=6041" BrowseName="1:NumberProduced" ParentNodeId="ns=2;i=5021" UserAccessLevel="3" AccessLevel="3">
-        <DisplayName>NumberProduced</DisplayName>
-        <References>
-            <Reference ReferenceType="HasComponent" IsForward="false">ns=2;i=5021</Reference>
-            <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
-        </References>
-    </UAVariable>
-    <UAVariable DataType="UInt32" NodeId="ns=2;i=6042" BrowseName="1:ProductID" ParentNodeId="ns=2;i=5021" UserAccessLevel="3" AccessLevel="3">
-        <DisplayName>ProductID</DisplayName>
-        <References>
-            <Reference ReferenceType="HasComponent" IsForward="false">ns=2;i=5021</Reference>
-            <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
-        </References>
-    </UAVariable>
-    <UAVariable DataType="Float" NodeId="ns=2;i=6043" BrowseName="1:actLevel" ParentNodeId="ns=2;i=5022" UserAccessLevel="3" AccessLevel="3">
-        <DisplayName>actLevel</DisplayName>
-        <References>
-            <Reference ReferenceType="HasComponent" IsForward="false">ns=2;i=5022</Reference>
-            <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
-        </References>
-    </UAVariable>
-    <UAVariable DataType="Float" NodeId="ns=2;i=6044" BrowseName="1:actPressure" ParentNodeId="ns=2;i=5022" UserAccessLevel="3" AccessLevel="3">
-        <DisplayName>actPressure</DisplayName>
-        <References>
-            <Reference ReferenceType="HasComponent" IsForward="false">ns=2;i=5022</Reference>
-            <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
-        </References>
-    </UAVariable>
-    <UAVariable DataType="Float" NodeId="ns=2;i=6045" BrowseName="1:actTemperature" ParentNodeId="ns=2;i=5022" UserAccessLevel="3" AccessLevel="3">
-        <DisplayName>actTemperature</DisplayName>
-        <References>
-            <Reference ReferenceType="HasComponent" IsForward="false">ns=2;i=5022</Reference>
-            <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
-        </References>
-    </UAVariable>
-    <UAVariable DataType="Boolean" NodeId="ns=2;i=6046" BrowseName="1:maxLevel" ParentNodeId="ns=2;i=5022" UserAccessLevel="3" AccessLevel="3">
-        <DisplayName>maxLevel</DisplayName>
-        <References>
-            <Reference ReferenceType="HasComponent" IsForward="false">ns=2;i=5022</Reference>
-            <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
-        </References>
-    </UAVariable>
-    <UAVariable DataType="Boolean" NodeId="ns=2;i=6047" BrowseName="1:maxTemperature" ParentNodeId="ns=2;i=5022" UserAccessLevel="3" AccessLevel="3">
-        <DisplayName>maxTemperature</DisplayName>
-        <References>
-            <Reference ReferenceType="HasComponent" IsForward="false">ns=2;i=5022</Reference>
-            <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
-        </References>
-    </UAVariable>
-    <UAVariable DataType="Float" NodeId="ns=2;i=6048" BrowseName="1:FillingBottles" ParentNodeId="ns=2;i=5023" UserAccessLevel="3" AccessLevel="3">
-        <DisplayName>FillingBottles</DisplayName>
-        <References>
-            <Reference ReferenceType="HasComponent" IsForward="false">ns=2;i=5023</Reference>
-            <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
-        </References>
-    </UAVariable>
-    <UAVariable DataType="Float" NodeId="ns=2;i=6049" BrowseName="1:FillingTank" ParentNodeId="ns=2;i=5023" UserAccessLevel="3" AccessLevel="3">
-        <DisplayName>FillingTank</DisplayName>
-        <References>
-            <Reference ReferenceType="HasComponent" IsForward="false">ns=2;i=5023</Reference>
-            <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
-        </References>
-    </UAVariable>
-    <UAVariable DataType="Float" NodeId="ns=2;i=6050" BrowseName="1:HeatingTank" ParentNodeId="ns=2;i=5023" UserAccessLevel="3" AccessLevel="3">
-        <DisplayName>HeatingTank</DisplayName>
-        <References>
-            <Reference ReferenceType="HasComponent" IsForward="false">ns=2;i=5023</Reference>
-            <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
-        </References>
-    </UAVariable>
-    <UAVariable DataType="Float" NodeId="ns=2;i=6051" BrowseName="1:HeatingTank" ParentNodeId="ns=2;i=5024" UserAccessLevel="3" AccessLevel="3">
-        <DisplayName>HeatingTank</DisplayName>
-        <References>
-            <Reference ReferenceType="HasComponent" IsForward="false">ns=2;i=5024</Reference>
-            <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
-        </References>
-    </UAVariable>
-    <UAVariable DataType="Float" NodeId="ns=2;i=6052" BrowseName="1:FillingTank" ParentNodeId="ns=2;i=5025" UserAccessLevel="3" AccessLevel="3">
-        <DisplayName>FillingTank</DisplayName>
-        <References>
-            <Reference ReferenceType="HasComponent" IsForward="false">ns=2;i=5025</Reference>
             <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
         </References>
     </UAVariable>

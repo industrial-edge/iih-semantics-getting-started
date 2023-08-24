@@ -20,15 +20,15 @@
   
 ## Configure PLCs with TIA Portal
 
-For this tutorial 3 PLCs will be used that each demonstrate one line of a production plant. The TIA project can be found [here]([src/tiaproject.zap16](https://github.com/industrial-edge/miscellaneous/blob/main/tank%20application/tia-tank-application.zap16)). Please adjust the IP adresses to your enviroment, download the project to three PLCs and start them up. A simulation of a filling line will be excecuted automatically.
+For this tutorial two PLCs will be used that each demonstrate one line of a production plant. The TIA project can be found [here]([src/tiaproject.zap16](https://github.com/industrial-edge/miscellaneous/blob/main/tank%20application/tia-tank-application.zap16)). Please adjust the IP adresses to your enviroment, download the project to two PLCs and start them up. A simulation of a filling line will be excecuted automatically.
 
 ## Configure PLC Connection
 
-To get the relevant data from the PLCs to the Edge Device there are several Connectors available. The IIH forms a central integration layer where all connector data can be standardized and mapped on a data model. For this example we will use two options, OPC UA Connector and SIMATIC S7+ Connector.
+To retrieve relevant data from the PLCs to the Edge Device, several Connectors are available. The IIH forms a central integration layer where all connector data can be standardized and mapped onto a data model. For this example, we will use two options: the OPC UA Connector and the SIMATIC S7+ Connector.
 
 ### Option 1: SIMATIC S7+ Connector
 
-SIMATIC S7+ Connector reads data from PLC and then IIH app will collect it. We need to export tags from TIA Portal Project using SIMATIC SCADA Export.
+SIMATIC S7+ Connector reads data from the PLC and then the IIH app will collect it. We need to export tags from TIA Portal Project using SIMATIC SCADA Export.
 
 ![SimaticScadaExport](graphics/simatic_scada_export.png)
 
@@ -43,7 +43,7 @@ In order to build this infrastructure, we need to have installed the following c
 
 #### Configure IIH Configurator
 
-SIMATIC S7+ Import Converter converts the export file to a Connectivity Suite Configuration.
+The SIMATIC S7+ Import Converter converts the export file into a Connectivity Suite Configuration.
 
 In your IED click IIH Configurator to open it.
 
@@ -100,9 +100,8 @@ In order to build this infrastructure, we need the following connectors and apps
 4. After adding the PLC, click on the browse symbol and add the following variables to your configuration:  
 ![OPCUA Tags](graphics/opcua_tags.png)
 
-5. Repeat step 3. and 4. for another PLC (Example Data Model consists of 3 PLCs in total)
 
-6. **Deploy** and **start** the project.
+5. **Deploy** and **start** the project.
 
 If you don't want to perform all these steps manually, you can import this [configuration file](../src/opcuaconnector.json).
 
@@ -137,7 +136,7 @@ From SiOME, two nodesets were exported, one for the companion specification and 
 
 ### Import a Companion Specification
 
-Go to IIH Configurator.
+Open the IIH Configurator in your IED.
 
 1. In **Define Data -> Organize** select **Create Model**. Then select **Add Model**.  
 ![IIH_CreateModel](graphics/iih_create_model.png)
@@ -186,7 +185,7 @@ You have successfully created a data model based on OPC UA. The next step is to 
 
 ## Creating Asset Model
 
-To make use of the full functionality of IIH your OPC UA model has to be mapped to an **Asset Model**. This is the data model structure which is used by several apps like Perfomance Insight or Energy Manager.
+To make use of the full functionality of IIH, your OPC UA model has to be mapped to an **Asset Model**. This is the data model structure which is used by several apps like Perfomance Insight or Energy Manager.
 
 1. Select **Asset Model** in the right editor window and create a new asset 
 ![AddParentAsset](graphics/AddParentAsset.png)
