@@ -39,15 +39,17 @@ In this example it is explained how to get the data from those connectors to the
 
 * Access to an Industrial Edge Management System (IEM)
 * Onboarded Industrial Edge Device on IEM
-* Installed System Configurators for IE Databus and OPC UA Connector
-* Installed System Apps IE Databus and OPC UA Connector
-* Installed Apps SIMATIC S7+ Connector
-* Installed Apps SIMATIC S7+ Import Converter
-* Installed Apps IIH Core
-* Installed Apps IIH Configurator
-* Installed Apps IIH Registry Service
-* Edge device is connected to PLC
-* TIA portal project loaded on PLC (e.g. filling application) with OPC UA Server activated
+* Installed System Configurators for Databus and OPC UA Connector
+* Installed Apps:
+  * Databus
+  * OPC UA Connector
+  * SIMATIC S7+ Connector
+  * Common Import Converter
+  * IIH Semantics
+  * Common Configurator
+  * Registry Service
+  * IIH Essentials
+* Edge device is connected to PLCs
 * OPC UA model created with SiOME using a Companion Specification
 
 ### Used components
@@ -61,16 +63,16 @@ TIA and PLC:
   
 Industrial Edge:
 * Industrial Edge Management App V1.13.10
-* IE Databus V2.2.0
-* IE Databus Configurator V2.2.0
-* OPC UA Connector V1.8.1
-* Common Connector Configurator V1.8.2
+* Databus V2.2.0
+* Databus Configurator V2.2.0
+* OPC UA Connector V2.0.0
+* Common Connector Configurator V1.9.0
 * SIMATIC S7+ Connector V1.2.0
-* SIMATIC S7+ Import Converter V1.2.0
-* IIH Core V1.6.1
-* IIH Configurator V1.6.1
-* IIH Registry Service V1.6.1
-* Data Service V1.7.0
+* Common Import Converter V2.0.0
+* IIH Semantics V1.8.0
+* Common Configurator V1.8.0
+* Registry Service V1.8.0
+* IIH Essentials V1.8.0
 * Industrial Edge Virtual Device V1.12.0.3-a
 
 
@@ -82,7 +84,7 @@ The application example is based on the filling bottles example:
 
 * [Configure PLCs](docs/Installation.md#configure-plcs-with-tia-portal)
 * [Configure PLC Connections](docs/Installation.md#configure-plc-connection)
-* [Import OPC UA Model in IIH](docs/Installation.md#import-opc-ua-model)
+* [Import OPC UA Model in IIH](docs/Installation.md#configure-opc-ua-model)
 * [Tags Mapping](docs/Installation.md#mapping-tags)
 * [Creating Asset Model](docs/Installation.md#creating-asset-model)
 
@@ -116,12 +118,12 @@ You can find further documentation and help in the following links
 ## Contribution
 
 Thank you for your interest in contributing. Anybody is free to report bugs, unclear documentation, and other problems regarding this repository in the Issues section.
-
 Additionally everybody is free to propose any changes to this repository using Pull Requests.
 
-If you are interested in contributing via Pull Request, please check the [Contribution License Agreement](Siemens_CLA_1.1.pdf) and forward a signed copy to [industrialedge.industry@siemens.com](mailto:industrialedge.industry@siemens.com?subject=CLA%20Agreement%20Industrial-Edge).
+If you haven't previously signed the [Siemens Contributor License Agreement](https://github.com/siemens/.github/blob/main/cla/cla.md) (CLA), the system will automatically prompt you to do so when you submit your Pull Request. This can be conveniently done through the CLA Assistant's online platform.
+Once the CLA is signed, your Pull Request will automatically be cleared and made ready for merging if all other test stages succeed.
 
 ## License and Legal Information
 
-Please read the [Legal information](LICENSE.txt).
+Please read the [Legal information](LICENSE.md).
 

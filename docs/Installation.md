@@ -4,13 +4,13 @@
   - [Configure PLCs with TIA Portal](#configure-plcs-with-tia-portal)
   - [Configure PLC Connection](#configure-plc-connection)
     - [Option 1: SIMATIC S7+ Connector](#option-1-simatic-s7-connector)
-      - [Configure IIH Configurator](#configure-iih-configurator)
+      - [Common Configurator](#common-configurator)
     - [Option 2: OPC UA Connector](#option-2-opc-ua-connector)
-      - [Configure the IE Databus](#configure-the-ie-databus)
+      - [Configure the Databus](#configure-the-databus)
       - [Configure the OPC UA Connector](#configure-the-opc-ua-connector)
-      - [IIH Registry Service](#iih-registry-service)
-      - [Configure the IIH Configurator](#configure-the-iih-configurator)
-  - [Import OPC UA Model](#import-opc-ua-model)
+      - [Registry Service](#registry-service)
+      - [Common Configurator](#common-configurator-1)
+  - [Configure OPC UA Model](#configure-opc-ua-model)
     - [Import a Companion Specification](#import-a-companion-specification)
     - [Import the OPC UA model](#import-the-opc-ua-model)
   - [Mapping tags](#mapping-tags)
@@ -36,49 +36,54 @@ A file **Export.zip** is created. This file is available in [src](../src).
 
 In order to build this infrastructure, we need to have installed the following connectors and apps:
 
-- SIMATIC S7+ Import Converter
+- Common Import Converter
 - SIMATIC S7+ Connector
-- IIH Core
-- IIH Configurator
+- IIH Semantics
+- Common Configurator
 
-#### Configure IIH Configurator
+#### Common Configurator
 
-The SIMATIC S7+ Import Converter converts the export file into a Connectivity Suite Configuration.
+The Common Import Converter converts the export file into a Connectivity Suite Configuration.
 
-In your IED click IIH Configurator to open it.
+In your IED click Common Configurator to open it.
 
 1. Go to **Get Data -> Connector Configuration** and click inside the **SIMATIC S7+ Connector** box.  
 ![S7Conf1](graphics/iih_s7_conf1.png)
 
-2. Add the tags by importing the Export.zip file from TIA Portal.  
+2. Go to **Tags** and click on **Add data source**  
 ![S7Conf2](graphics/iih_s7_conf2.png)
+
+3. Select the communication protocol and the option **Add from file**
 ![S7Conf3](graphics/iih_s7_conf3.png)
 
-3. After importing the file make sure to set the **PLC IP address** correctly.  
+4. After importing the file make sure to set the **PLC IP address** correctly. Then click on **Continue to "Select Tags"**
 ![S7Conf4](graphics/iih_s7_conf4.png)
 
-4. Select all the tags needed, choose the Acquisition Cycle, the Access Mode and click **Apply** and then **Import**.  
+5. Per default all tags are preconfigured. You can select all and press **Reset Configuration**
+   
+6. Select all the tags needed, choose the Acquisition Cycle, the Access Mode and click **Apply** and then **Import**.  
 ![S7Conf6](graphics/iih_s7_conf6.png)
 
-5. Select the PLC Connection and then deploy.  
+7. Select the PLC Connection and then deploy.  
 ![S7Conf8](graphics/iih_s7_conf8.png)
 
-6. Monitor the connection status in the **Connector Configuration** tab 
+8. Monitor the connection status in the **Connector Configuration** tab 
 ![S7Conf9](graphics/iih_s7_conf9.png)
 
 ### Option 2: OPC UA Connector
 
-OPC UA Connector reads data from PLC OPC UA Server and sends data to the IE Databus where the IIH app will collect it.
+OPC UA Connector reads data from PLC OPC UA Server and sends data to the Databus where the IIH app will collect it.
 
 In order to build this infrastructure, we need the following connectors and apps:
 
-- IE Databus
+- Databus
 - OPC UA Connector
-- IIH Registry Service
-- IIH Core
-- IIH Configurator
+- Registry Service
+- Common Import Converter
+- IIH Semantics
+- Common Configurator
 
-#### Configure the IE Databus
+#### Configure the Databus
 
 1. Go on you IEM and open the Databus Configurator in the **Data Connections** section
    
@@ -101,25 +106,25 @@ In order to build this infrastructure, we need the following connectors and apps
 ![OPCUA Tags](graphics/opcua_tags.png)
 
 
-5. **Deploy** and **start** the project.
+1. **Deploy** the configuration.
 
 If you don't want to perform all these steps manually, you can import this [configuration file](../src/opcuaconnector.json).
 
-#### IIH Registry Service
+#### Registry Service
 
 This app needs to be installed on the IED. It allows to the IIH to discover which connectors are sending data to the Databus.
 
-#### Configure the IIH Configurator
+#### Common Configurator
 
 This apps allows the configuration of the IIH. 
 
-1. In your IED click IIH Configurator to open it.
+1. In your IED click on Common Configurator to open it.
 
 2. Go to the settings tab and add the Databus credentials for subscribing and publishing topics.  
 ![IIH Databus_PubCred](graphics/iih_databus_pub_credentials.png)
 
 
-## Import OPC UA Model
+## Configure OPC UA Model
 
 OPC UA protocol allows companies or organizations to standardize their data for an OPC UA information model. It is possible to generate standardized interfaces for the OPC UA servers, so OPC UA clients only need to know the information defined in that standard and not taking into account information not relevant.
 
@@ -138,13 +143,13 @@ From SiOME, two nodesets were exported, one for the companion specification and 
 
 Open the IIH Configurator in your IED.
 
-1. In **Define Data -> Organize** select **Create Model**. Then select **Add Model**.  
+1. In **Define Data -> OPCUA Model** select **Add Model**
 ![IIH_CreateModel](graphics/iih_create_model.png)
 
-2. Add a companion specification .xml file. The file used in the example is called TankNodeset.xml  
+1. Select **Load companion specification**  
 ![IIH_LoadCompanionSpec](graphics/iih_load_comp_spec.png)
 
-3. Load the TankNodeset.xml and select the namespace for the companion specification:  
+1. Load the TankNodeset.xml and select the namespace for the companion specification:  
 ![IIH_CompSpec_Namespace](graphics/iih_namespace_comp_spec.png)
 
 ### Import the OPC UA model
@@ -154,10 +159,10 @@ The model is an instance of the standardized information that is defined in the 
 1. Select **Add model** again.  
 ![IIH_AddInstance](graphics/iih_addmodel_instance.png)
 
-2. Load the TankModelNodeset.xml  
+2. Select **Load instance model** 
 ![IIH_LoadInstance](graphics/iih_load_instance.png)
 
-3. Select the namespace for that model.  
+3. Select the namespace for that model. If you want to use the GraphQL API, please also select the checkbox here.  
 ![IIH_model_Namespace](graphics/iih_select_model_namespace.png)
 
 You have successfully created a data model based on OPC UA. The next step is to map connector variables to it, to fill the model with data.
@@ -165,15 +170,16 @@ You have successfully created a data model based on OPC UA. The next step is to 
 ## Mapping tags
 
 ### Option 1: SIMATIC S7+ Connector Mapping
-
-1. Select **OPC UA** and the namespace for the model in the respective dropdown menus on the right side of the window.  
+1. Go to **Define Data -> Organize**
    
-2. On the left ide you should see the **Data Sources**. Select **SIMATIC S7+ Connector** from the dropdown menu.  
+2. Select **OPC UA** and the namespace for the model in the respective dropdown menus on the right side of the window.  
    
-3. Drag and drop tags from the left window into the OPC UA model.  
+3. On the left ide you should see the **Data Sources**. Select **SIMATIC S7+ Connector** from the dropdown menu.  
 ![IIH_s7mapping](graphics/iih_s7_mapping.png)
 
-4. **Deploy**  
+4. Drag and drop tags from the left window into the OPC UA model.  
+
+5. **Deploy**  
 ![IIH_s7mapping_deploy](graphics/iih_s7_mapping_deploy.png)
 
 ### Option 2: OPC UA Connector Mapping
@@ -193,4 +199,4 @@ To make use of the full functionality of IIH, your OPC UA model has to be mapped
 1. Then you can map the OPC UA model to that asset per drag and drop  
 ![MapOPCtoAsset](graphics/MapOPCtoAsset.png)
 
-This model will be the central information layer for all your applications. By using an asset model you are also able to activate the **Storage** and **Cloud Sync** feature for your tags.
+This model will be the central information layer for all your applications. If you have IIH Essentials installed, you are also able to activate the **Storage** and **Cloud Sync** feature for the tags in your asset model.
