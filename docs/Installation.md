@@ -4,11 +4,12 @@
   - [Configure PLCs with TIA Portal](#configure-plcs-with-tia-portal)
   - [Configure PLC Connection](#configure-plc-connection)
     - [Option 1: SIMATIC S7+ Connector](#option-1-simatic-s7-connector)
+      - [Registry Service](#registry-service)
       - [Common Configurator](#common-configurator)
     - [Option 2: OPC UA Connector](#option-2-opc-ua-connector)
       - [Configure the Databus](#configure-the-databus)
       - [Configure the OPC UA Connector](#configure-the-opc-ua-connector)
-      - [Registry Service](#registry-service)
+      - [Registry Service](#registry-service-1)
       - [Common Configurator](#common-configurator-1)
   - [Configure OPC UA Model](#configure-opc-ua-model)
     - [Import a Companion Specification](#import-a-companion-specification)
@@ -28,7 +29,7 @@ To retrieve relevant data from the PLCs to the Edge Device, several Connectors a
 
 ### Option 1: SIMATIC S7+ Connector
 
-SIMATIC S7+ Connector reads data from the PLC and then the IIH app will collect it. We need to export tags from TIA Portal Project using SIMATIC SCADA Export.
+SIMATIC S7+ Connector reads data from the PLC and then the IIH app will collect it. We need to export tags from TIA Portal Project using [SIMATIC SCADA Export for TIA Portal](https://support.industry.siemens.com/cs/ww/en/view/109748955).
 
 ![SimaticScadaExport](graphics/simatic_scada_export.png)
 
@@ -39,11 +40,17 @@ In order to build this infrastructure, we need to have installed the following c
 - Common Import Converter
 - SIMATIC S7+ Connector
 - IIH Semantics
+- Registry Service
 - Common Configurator
+
+
+#### Registry Service
+
+This app needs to be installed on the IED. It allows service registration and service discovery for connectors and related components.
 
 #### Common Configurator
 
-The Common Import Converter converts the export file into a Connectivity Suite Configuration.
+The Common Import Converter converts the exported file (Export.zip) into a SIMATIC S7+ Connector configuration.
 
 In your IED click Common Configurator to open it.
 
@@ -112,7 +119,7 @@ If you don't want to perform all these steps manually, you can import this [conf
 
 #### Registry Service
 
-This app needs to be installed on the IED. It allows to the IIH to discover which connectors are sending data to the Databus.
+This app needs to be installed on the IED. It allows service registration and service discovery for connectors and related components.
 
 #### Common Configurator
 
@@ -126,9 +133,9 @@ This apps allows the configuration of the IIH.
 
 ## Configure OPC UA Model
 
-OPC UA protocol allows companies or organizations to standardize their data for an OPC UA information model. It is possible to generate standardized interfaces for the OPC UA servers, so OPC UA clients only need to know the information defined in that standard and not taking into account information not relevant.
+OPC UA protocol allows companies or organizations to standardize their data in an OPC UA information model. Generating standardized interfaces for OPC UA servers enables interoperability at the semantic level.
 
-This standardized interface is called companion specification. There are already many organizations or groups of companies which have standardized some OPC UA information models for some industries, but a user can also create their own companion specifications.
+Companion Specification are so called "Industry Standard Models". There are many organizations or groups which have standardized some OPC UA information models for some industries, but a user can also create their own companion specifications.
 
 In this example, a user-defined companion specification for the filling bottle machine was created and then used as a basis for a data model using Siemens OPC UA modeling Editor (SiOME). 
 
@@ -174,7 +181,7 @@ You have successfully created a data model based on OPC UA. The next step is to 
    
 2. Select **OPC UA** and the namespace for the model in the respective dropdown menus on the right side of the window.  
    
-3. On the left ide you should see the **Data Sources**. Select **SIMATIC S7+ Connector** from the dropdown menu.  
+3. On the left side you should see the **Data Sources**. Select **SIMATIC S7+ Connector** from the dropdown menu.  
 ![IIH_s7mapping](graphics/iih_s7_mapping.png)
 
 4. Drag and drop tags from the left window into the OPC UA model.  
