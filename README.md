@@ -25,8 +25,8 @@ This application example describes the implementation and usage of the IIH as a 
 ![Overview](docs/graphics/overview.png)
 
 ### General Task
-The main goal of the task is to read some relevant data from the PLC and have it accessible to other applications with a standardized model of information using OPC UA Companion Specifications. IIH maps data from PLC to those models and makes data accessible via an OPC UA Server.
-To read data from PLC two options are demonstrated: 
+The main goal of the task is to read some relevant data from the PLC and have it accessible to other applications with a standardized model of information using OPC UA Companion Specifications. IIH maps data from the PLC to those models and makes data accessible via an OPC UA Server.
+To read data from the PLC two options are demonstrated: 
 1. OPC UA Connector (Databus)
 2. SIMATIC S7+ Connector (Connectivity Suite)  
    
@@ -39,14 +39,14 @@ To read data from PLC two options are demonstrated:
 - Onboarded Industrial Edge Device (IED) on IEM
 - Installed Configurators for Databus and OPC UA Connector (Common Connector Configurator)
 - Installed Apps:
-  - Databus
-  - OPC UA Connector
-  - SIMATIC S7+ Connector
-  - Common Import Converter
-  - IIH Semantics
   - Common Configurator
-  - Registry Service
+  - Common Import Converter 
+  - Databus
   - IIH Essentials
+  - IIH Semantics 
+  - OPC UA Connector
+  - Registry Service
+  - SIMATIC S7+ Connector
 - IED is connected to PLCs
 - OPC UA model created with SiOME using a Companion Specification
 
@@ -61,17 +61,17 @@ TIA and PLC:
   
 Industrial Edge:
 - Industrial Edge Management App V1.13.10
-- Databus V2.2.0
 - Databus Configurator V2.2.0
-- OPC UA Connector V2.0.0-1
 - Common Connector Configurator V1.9.0-11
-- SIMATIC S7+ Connector V1.2.0-2
-- Common Import Converter V2.0.0-1
-- IIH Semantics V1.8.0
-- Common Configurator V1.8.0
-- Registry Service V1.8.0-4
-- IIH Essentials V1.8.0
 - Industrial Edge Virtual Device V1.12.0.3-a
+- Common Configurator V1.8.0
+- Common Import Converter V2.0.0-1
+- Databus V2.2.0
+- IIH Essentials V1.8.0
+- IIH Semantics V1.8.0
+- OPC UA Connector V2.0.0-1
+- Registry Service V1.8.0-4
+- SIMATIC S7+ Connector V1.2.0-2
 
 
 ### TIA Project

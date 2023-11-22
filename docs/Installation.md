@@ -37,22 +37,22 @@ A file **Export.zip** is created. This file is available in [src](../src).
 
 In order to build this infrastructure, we need to have installed the following connectors and apps:
 
+- Common Configurator
 - Common Import Converter
-- SIMATIC S7+ Connector
 - IIH Semantics
 - Registry Service
-- Common Configurator
+- SIMATIC S7+ Connector
 
 
 #### Registry Service
 
 This app needs to be installed on the IED. It allows service registration and service discovery for connectors and related components.
 
-#### Common Configurator
+#### IIH Semantics
 
 The Common Import Converter converts the exported file (Export.zip) into a SIMATIC S7+ Connector configuration.
 
-In your IED click Common Configurator to open it.
+In your IED click IIH Semantics to open it.
 
 1. Go to **Get Data -> Connector Configuration** and click inside the **SIMATIC S7+ Connector** box.  
 ![S7Conf1](graphics/iih_s7_conf1.png)
@@ -73,6 +73,7 @@ In your IED click Common Configurator to open it.
 
 7. Select the PLC Connection and then deploy.  
 ![S7Conf8](graphics/iih_s7_conf8.png)
+![S7Conf8_2](graphics/iih_s7_conf8_2.png)
 
 8. Monitor the connection status in the **Connector Configuration** tab 
 ![S7Conf9](graphics/iih_s7_conf9.png)
@@ -83,12 +84,12 @@ OPC UA Connector reads data from PLC OPC UA Server and sends data to the Databus
 
 In order to build this infrastructure, we need the following connectors and apps:
 
+- Common Configurator
+- Common Import Converter
 - Databus
+- IIH Semantics
 - OPC UA Connector
 - Registry Service
-- Common Import Converter
-- IIH Semantics
-- Common Configurator
 
 #### Configure the Databus
 
@@ -127,7 +128,7 @@ This apps allows the configuration of the IIH.
 
 1. In your IED click on Common Configurator to open it.
 
-2. Go to the settings tab and add the Databus credentials for subscribing and publishing topics.  
+2. Go to the settings tab and add the Databus credentials for subscribing and publishing topics. Make sure that the default Databus Service name is also entered.
 ![IIH Databus_PubCred](graphics/iih_databus_pub_credentials.png)
 
 
@@ -200,10 +201,12 @@ You have successfully created a data model based on OPC UA. The next step is to 
 
 To make use of the full functionality of IIH, your OPC UA model has to be mapped to an **Asset Model**. This is the data model structure which is used by several apps like Perfomance Insight or Energy Manager.
 
-1. Select **Asset Model** in the right editor window and create a new asset 
+1. Go to **Define Data -> Organize**
+
+2. Select **Asset Model** in the right editor window and create a new asset 
 ![AddParentAsset](graphics/AddParentAsset.png)
 
-1. Then you can map the OPC UA model to that asset per drag and drop  
+3. Then you can map the OPC UA model to that asset by dragging and dropping the OPC UA hierarchy object
 ![MapOPCtoAsset](graphics/MapOPCtoAsset.png)
 
 This model will be the central information layer for all your applications. If you have IIH Essentials installed, you are also able to activate the **Storage** and **Cloud Sync** feature for the tags in your asset model.
