@@ -1,5 +1,4 @@
 # Industrial Information Hub (IIH) Getting Started
-
 This repository contains the source files to build the Industrial Information Hub Getting Started example.
 
 - [Industrial Information Hub (IIH) Getting Started](#industrial-information-hub-iih-getting-started)
@@ -17,9 +16,7 @@ This repository contains the source files to build the Industrial Information Hu
   - [License and Legal Information](#license-and-legal-information)
 
 ## Description
-
 ### Overview
-
 This application example describes the implementation and usage of the IIH as a central integration layer. It is shown how data can be read from a PLCs and get mapped on a data model. This model then can be accessed by external applications via different APIs or OPC UA.
 
 ![Overview](docs/graphics/overview.png)
@@ -28,13 +25,10 @@ This application example describes the implementation and usage of the IIH as a 
 The main goal of the task is to read some relevant data from the PLC and have it accessible to other applications with a standardized model of information using OPC UA Companion Specifications. IIH maps data from the PLC to those models and makes data accessible via an OPC UA Server.
 To read data from the PLC two options are demonstrated: 
 1. OPC UA Connector (Databus)
-2. SIMATIC S7+ Connector (Connectivity Suite)  
-   
+2. SIMATIC S7+ Connector (Connectivity Suite)     
 
 ## Requirements
-
 ### Prerequisites
-
 - Access to an Industrial Edge Management System (IEM)
 - Onboarded Industrial Edge Device (IED) on IEM
 - Installed Configurators for Databus and OPC UA Connector (Common Connector Configurator)
@@ -51,7 +45,6 @@ To read data from the PLC two options are demonstrated:
 - OPC UA model created with SiOME using a Companion Specification
 
 ### Used components
-
 TIA and PLC:
 - TIA Portal V16
 - PLC: CPU 1511 FW 2.8.3
@@ -73,21 +66,18 @@ Industrial Edge:
 - Registry Service V1.8.0-4
 - SIMATIC S7+ Connector V1.2.0-2
 
-
 ### TIA Project
 The application example is based on the filling bottles example:
 - [Tank application](https://github.com/industrial-edge/miscellaneous/tree/main/tank%20application)
 
 ## Configuration Steps
-
-- [Configure PLCs](docs/Installation.md#configure-plcs-with-tia-portal)
-- [Configure PLC Connections](docs/Installation.md#configure-plc-connection)
-- [Import OPC UA Model in IIH](docs/Installation.md#configure-opc-ua-model)
-- [Tags Mapping](docs/Installation.md#mapping-tags)
+- [Configure PLCs with TIA Portal](docs/Installation.md#configure-plcs-with-tia-portal)
+- [Configure PLC Connections](docs/Installation.md#configure-plc-connections)
+- [Import OPC UA Model](docs/Installation.md#import-opc-ua-model)
+- [Mapping Tags](docs/Installation.md#mapping-tags)
 - [Creating Asset Model](docs/Installation.md#creating-asset-model)
 
 ## Usage
-
 Once the application is successfully deployed, data from the filling bottle machine is accessible via OPC UA to external OPC UA clients.
 
 It is possible to check that using the UA Expert:
@@ -102,7 +92,6 @@ It is possible to check that using the UA Expert:
 ![UA Expert Browse](docs/graphics/uaexpert_browse.png)
 
 ## Documentation
-
 You can find further documentation and help in the following links
 
 - [Industrial Edge Hub](https://iehub.eu1.edge.siemens.cloud/#/documentation)
@@ -114,13 +103,11 @@ You can find further documentation and help in the following links
 - [SiOME](https://support.industry.siemens.com/cs/es/en/view/109755133)
 
 ## Contribution
-
 Thank you for your interest in contributing. Anybody is free to report bugs, unclear documentation, and other problems regarding this repository in the Issues section.
 Additionally everybody is free to propose any changes to this repository using Pull Requests.
 
 If you haven't previously signed the [Siemens Contributor License Agreement](https://cla-assistant.io/industrial-edge/) (CLA), the system will automatically prompt you to do so when you submit your Pull Request. This can be conveniently done through the CLA Assistant's online platform. Once the CLA is signed, your Pull Request will automatically be cleared and made ready for merging if all other test stages succeed.
 
 ## License and Legal Information
-
 Please read the [Legal information](LICENSE.md).
 

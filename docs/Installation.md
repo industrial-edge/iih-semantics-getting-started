@@ -1,17 +1,18 @@
 # Installation
-
 - [Installation](#installation)
   - [Configure PLCs with TIA Portal](#configure-plcs-with-tia-portal)
-  - [Configure PLC Connection](#configure-plc-connection)
+  - [Configure PLC Connections](#configure-plc-connections)
     - [Option 1: SIMATIC S7+ Connector](#option-1-simatic-s7-connector)
+      - [Common Import Converter](#common-import-converter)
       - [Registry Service](#registry-service)
-      - [Common Configurator](#common-configurator)
+      - [Configure Common Configurator](#configure-common-configurator)
     - [Option 2: OPC UA Connector](#option-2-opc-ua-connector)
-      - [Configure the Databus](#configure-the-databus)
-      - [Configure the OPC UA Connector](#configure-the-opc-ua-connector)
+      . [Common Import Converter](#common-import-converter-1)
       - [Registry Service](#registry-service-1)
-      - [Common Configurator](#common-configurator-1)
-  - [Configure OPC UA Model](#configure-opc-ua-model)
+      - [Configure Databus](#configure-databus)
+      - [Configure OPC UA Connector](#configure-opc-ua-connector)
+      - [Common Configurator](#configure-common-configurator-1)
+  - [Import OPC UA Model](#import-opc-ua-model)
     - [Import a Companion Specification](#import-a-companion-specification)
     - [Import the OPC UA model](#import-the-opc-ua-model)
   - [Mapping tags](#mapping-tags)
@@ -20,15 +21,12 @@
   - [Creating Asset Model](#creating-asset-model)
   
 ## Configure PLCs with TIA Portal
-
 For this tutorial two PLCs will be used that each demonstrate one line of a production plant. The TIA project can be found [here](https://github.com/industrial-edge/miscellaneous/blob/main/tank%20application/tia-tank-application.zap16). Please adjust the IP adresses to your enviroment, download the project to two PLCs and start them up. A simulation of a filling line will be excecuted automatically.
 
-## Configure PLC Connection
-
+## Configure PLC Connections
 To retrieve relevant data from the PLCs to the Edge Device, several Connectors are available. The IIH forms a central integration layer where all connector data can be standardized and mapped onto a data model. For this example, we will use two options: the OPC UA Connector and the SIMATIC S7+ Connector.
 
 ### Option 1: SIMATIC S7+ Connector
-
 SIMATIC S7+ Connector reads data from the PLC and then the IIH app will collect it. We need to export tags from TIA Portal Project using [SIMATIC SCADA Export for TIA Portal](https://support.industry.siemens.com/cs/ww/en/view/109748955).
 
 ![SimaticScadaExport](graphics/simatic_scada_export.png)
@@ -43,16 +41,14 @@ In order to build this infrastructure, we need to have installed the following c
 - Registry Service
 - SIMATIC S7+ Connector
 
-
-#### Registry Service
-
-This app needs to be installed on the IED. It allows service registration and service discovery for connectors and related components.
-
-#### IIH Semantics
-
+#### Common Import Converter
 The Common Import Converter converts the exported file (Export.zip) into a SIMATIC S7+ Connector configuration.
 
-In your IED click IIH Semantics to open it.
+#### Registry Service
+This app needs to be installed on the IED. It allows service registration and service discovery for connectors and related components.
+
+#### Configure Common Configurator
+In your IED click Common Configurator to open it.
 
 1. Go to **Get Data -> Connector Configuration** and click inside the **SIMATIC S7+ Connector** box.  
 ![S7Conf1](graphics/iih_s7_conf1.png)
@@ -79,7 +75,6 @@ In your IED click IIH Semantics to open it.
 ![S7Conf9](graphics/iih_s7_conf9.png)
 
 ### Option 2: OPC UA Connector
-
 OPC UA Connector reads data from PLC OPC UA Server and sends data to the Databus where the IIH app will collect it.
 
 In order to build this infrastructure, we need the following connectors and apps:
@@ -91,8 +86,13 @@ In order to build this infrastructure, we need the following connectors and apps
 - OPC UA Connector
 - Registry Service
 
-#### Configure the Databus
+#### Common Import Converter
+The Common Import Converter converts the exported file (Export.zip) into a SIMATIC S7+ Connector configuration.
 
+#### Registry Service
+This app needs to be installed on the IED. It allows service registration and service discovery for connectors and related components.
+
+#### Configure Databus
 1. Go on you IEM and open the Databus Configurator in the **Data Connections** section
    
 2. Create a new user and assign the topic `ie/#`  
@@ -100,12 +100,11 @@ In order to build this infrastructure, we need the following connectors and apps
 
 3. **Deploy** the configuration.
 
-#### Configure the OPC UA Connector
-
+#### Configure OPC UA Connector
 1. In your IEM, go to **Data Connections** and launch the **OPC UA Connector configurator**.
 
 2. Go to the settings menu, where you can fill in the Databus user you just created:   
-   ![OPCUAConfig1](graphics/OPCUAConfig1.png)
+![OPCUAConfig1](graphics/OPCUAConfig1.png)
 
 3. Add a new data source.  
 ![OPCUA DataSource](graphics/opcua_datasource.png)
@@ -113,17 +112,11 @@ In order to build this infrastructure, we need the following connectors and apps
 4. After adding the PLC, click on the browse symbol and add the following variables to your configuration:  
 ![OPCUA Tags](graphics/opcua_tags.png)
 
-
 1. **Deploy** the configuration.
 
 If you don't want to perform all these steps manually, you can import this [configuration file](../src/opcuaconnector.json).
 
-#### Registry Service
-
-This app needs to be installed on the IED. It allows service registration and service discovery for connectors and related components.
-
-#### Common Configurator
-
+#### Configure Common Configurator
 This apps allows the configuration of the IIH. 
 
 1. In your IED click on Common Configurator to open it.
@@ -132,8 +125,7 @@ This apps allows the configuration of the IIH.
 ![IIH Databus_PubCred](graphics/iih_databus_pub_credentials.png)
 
 
-## Configure OPC UA Model
-
+## Import OPC UA Model
 OPC UA protocol allows companies or organizations to standardize their data in an OPC UA information model. Generating standardized interfaces for OPC UA servers enables interoperability at the semantic level.
 
 Companion Specification are so called "Industry Standard Models". There are many organizations or groups which have standardized some OPC UA information models for some industries, but a user can also create their own companion specifications.
@@ -148,8 +140,7 @@ From SiOME, two nodesets were exported, one for the companion specification and 
 - [TankModelNodeset.xml](../src/TankModelNodeset.xml)
 
 ### Import a Companion Specification
-
-Open the IIH Configurator in your IED.
+Open the IIH Semantics application on your IED.
 
 1. In **Define Data -> OPCUA Model** select **Add Model**
 ![IIH_CreateModel](graphics/iih_create_model.png)
@@ -161,7 +152,6 @@ Open the IIH Configurator in your IED.
 ![IIH_CompSpec_Namespace](graphics/iih_namespace_comp_spec.png)
 
 ### Import the OPC UA model
-
 The model is an instance of the standardized information that is defined in the companion specification.
 
 1. Select **Add model** again.  
@@ -176,6 +166,7 @@ The model is an instance of the standardized information that is defined in the 
 You have successfully created a data model based on OPC UA. The next step is to map connector variables to it, to fill the model with data.
 
 ## Mapping tags
+In order to connect the variables with the actual values of your IIH to the OPCUA model you need to connect them. Therefore open the IIH Semantics app on your device and follow the steps below.
 
 ### Option 1: SIMATIC S7+ Connector Mapping
 1. Go to **Define Data -> Organize**
@@ -198,8 +189,7 @@ You have successfully created a data model based on OPC UA. The next step is to 
 2. **Deploy**
 
 ## Creating Asset Model
-
-To make use of the full functionality of IIH, your OPC UA model has to be mapped to an **Asset Model**. This is the data model structure which is used by several apps like Perfomance Insight or Energy Manager.
+To make use of the full functionality of IIH, your OPC UA model has to be mapped to an **Asset Model**. This is the data model structure which is used by several apps like Perfomance Insight or Energy Manager. Open the IIH Semantics app on your device.
 
 1. Go to **Define Data -> Organize**
 
