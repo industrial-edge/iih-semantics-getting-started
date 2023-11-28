@@ -95,7 +95,7 @@ This app needs to be installed on the IED. It allows service registration and se
 #### Configure Databus
 1. Go on you IEM and open the Databus Configurator in the **Data Connections** section.
    
-2. Create a new user and assign the topic `ie/#`.
+2. Create a new user and assign the topic `ie/#`.   
 ![DatabusConfig](graphics/DatabusConfig.png)
 
 3. **Deploy** the configuration.
@@ -104,12 +104,12 @@ This app needs to be installed on the IED. It allows service registration and se
 1. In your IEM, go to **Data Connections** and launch the **OPC UA Connector configurator**.
 
 2. Go to the settings menu, where you can fill in the Databus user you just created:   
-![OPCUAConfig1](graphics/OPCUAConfig1.png)
+![OPCUAConfig1](graphics/OPCUAConfig1.png)  
 
 3. Add a new data source.  
 ![OPCUA DataSource](graphics/opcua_datasource.png)
 
-4. After adding the PLC, click on the browse symbol and add the following variables to your configuration:  
+4. After adding the PLC, click on the browse symbol and add the following variables to your configuration:   
 ![OPCUA Tags](graphics/opcua_tags.png)
 
 1. **Deploy** the configuration.
@@ -121,7 +121,7 @@ This apps allows the configuration of the IIH.
 
 1. In your IED click on the Common Configurator to open it.
 
-2. Go to the settings tab and add the Databus credentials for subscribing and publishing topics. Make sure that the default Databus Service name is also entered.
+2. Go to the settings tab and add the Databus credentials for subscribing and publishing topics. Make sure that the default Databus Service name is also entered.   
 ![IIH Databus_PubCred](graphics/iih_databus_pub_credentials.png)
 
 
@@ -142,25 +142,25 @@ From SiOME, two nodesets were exported, one for the companion specification and 
 ### Import a Companion Specification
 Open the IIH Semantics application on your IED.
 
-1. In **Define Data -> OPCUA Model** select **Add Model**.
+1. In **Define Data -> OPCUA Model** select **Add Model**.   
 ![IIH_CreateModel](graphics/iih_create_model.png)
 
-1. Select **Load companion specification**.
+1. Select **Load companion specification**.   
 ![IIH_LoadCompanionSpec](graphics/iih_load_comp_spec.png)
 
-1. Load the TankNodeset.xml and select the namespace for the companion specification:  
+1. Load the TankNodeset.xml and select the namespace for the companion specification:   
 ![IIH_CompSpec_Namespace](graphics/iih_namespace_comp_spec.png)
 
 ### Import the OPC UA model
 The model is an instance of the standardized information that is defined in the companion specification.
 
-1. Select **Add model** again.  
+1. Select **Add model** again.   
 ![IIH_AddInstance](graphics/iih_addmodel_instance.png)
 
-2. Select **Load instance model**.
+2. Select **Load instance model**.   
 ![IIH_LoadInstance](graphics/iih_load_instance.png)
 
-3. Select the namespace for that model. If you want to use the GraphQL API, please also select the checkbox here.  
+3. Select the namespace for that model. If you want to use the GraphQL API, please also select the checkbox here.    
 ![IIH_model_Namespace](graphics/iih_select_model_namespace.png)
 
 You have successfully created a data model based on OPC UA. The next step is to map connector variables to it in order to fill the model with data.
@@ -173,18 +173,18 @@ To connect the OPCUA model with the actual values open the IIH Semantics app on 
    
 2. Select **OPC UA** and the namespace for the model in the respective dropdown menus on the right side of the window.  
    
-3. On the left side you should see the **Data Sources**. Select **SIMATIC S7+ Connector** from the dropdown menu.  
+3. On the left side you should see the **Data Sources**. Select **SIMATIC S7+ Connector** from the dropdown menu.   
 ![IIH_s7mapping](graphics/iih_s7_mapping.png)
 
 4. Drag and drop tags from the left window into the OPC UA model.  
 
-5. **Deploy** the changes.
+5. **Deploy** the changes.   
 ![IIH_s7mapping_deploy](graphics/iih_s7_mapping_deploy.png)
 
 ### Option 2: OPC UA Connector Mapping
 
-1. Follow the same procedure as for [Option 1](#option-1-simatic-s7-connector-mapping), while selecting 'opcuac1' from the connector dropdown menu:  
-  ![IIH_opcuamapping](graphics/iih_opcua_mapping.png)
+1. Follow the same procedure as for [Option 1](#option-1-simatic-s7-connector-mapping), while selecting 'opcuac1' from the connector dropdown menu:   
+![IIH_opcuamapping](graphics/iih_opcua_mapping.png)
 
 2. **Deploy** the changes.
 
@@ -193,10 +193,10 @@ To make use of the full functionality of the IIH, your OPC UA model has to be ma
 
 1. Go to **Define Data -> Organize**.
 
-2. Select **Asset Model** in the right editor window and create a new asset.
+2. Select **Asset Model** in the right editor window and create a new asset.   
 ![AddParentAsset](graphics/AddParentAsset.png)
 
-3. Map the OPC UA model by dragging and dropping the OPC UA hierarchy object to the created asset.
+3. Map the OPC UA model by dragging and dropping the OPC UA hierarchy object to the created asset.   
 ![MapOPCtoAsset](graphics/MapOPCtoAsset.png)
 
 This model will be the central information layer for all your applications. If you have IIH Essentials installed, you are also able to activate the **Storage** and **Cloud Sync** feature for the tags in your asset model.
