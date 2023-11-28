@@ -17,12 +17,12 @@ This repository contains the source files to build the Industrial Information Hu
 
 ## Description
 ### Overview
-This application example describes the implementation and usage of the IIH as a central integration layer. It is shown how data can be read from a PLCs and get mapped on a data model. This model then can be accessed by external applications via different APIs or OPC UA.
+This application example describes the implementation and usage of the IIH as a central integration layer. It is shown how data can be read from PLCs and mapped on a data model. This model then can be accessed by external applications via different APIs or OPC UA.
 
 ![Overview](docs/graphics/overview.png)
 
 ### General Task
-The main goal of the task is to read some relevant data from the PLC and have it accessible to other applications with a standardized model of information using OPC UA Companion Specifications. IIH maps data from the PLC to those models and makes data accessible via an OPC UA Server.
+The main goal of the task is to read some relevant data from the PLC and have it accessible to other applications with a standardized model of information using OPC UA companion specifications. The IIH maps data from the PLC to those models and makes data accessible via an OPC UA Server.
 To read data from the PLC two options are demonstrated: 
 1. OPC UA Connector (Databus)
 2. SIMATIC S7+ Connector (Connectivity Suite)     
@@ -82,17 +82,17 @@ Once the application is successfully deployed, data from the filling bottle mach
 
 It is possible to check that using the UA Expert:
 
-1. Connect to port `62520` of your IED to reach the IIH OPC UA Server  
+1. Connect to port `62520` of your IED to reach the IIH OPC UA Server. 
 ![UA Expert Server Configuration](docs/graphics/uaexpert_server.png)
 
-2. Authenticate with default username `iihcore` and password `iihcore`  
+2. Authenticate with default username `iihcore` and password `iihcore`. 
 ![UA Expert Server Auth](docs/graphics/uaexpert_auth_settings.png)
 
-3. Browse the OPC UA Server Model and display data  
+3. Browse the OPC UA Server Model and display data.
 ![UA Expert Browse](docs/graphics/uaexpert_browse.png)
 
 ## Documentation
-You can find further documentation and help in the following links
+You can find further documentation and help in the following links:
 
 - [Industrial Edge Hub](https://iehub.eu1.edge.siemens.cloud/#/documentation)
 - [Industrial Edge Forum](https://www.siemens.com/industrial-edge-forum)
