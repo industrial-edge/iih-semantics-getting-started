@@ -22,7 +22,7 @@ This application example describes the implementation and usage of the IIH as a 
 ![Overview](docs/graphics/overview.png)
 
 ### General Task
-The main goal of the task is to read some relevant data from the PLC and have it accessible to other applications with a standardized model of information using OPC UA companion specifications. The IIH maps data from the PLC to those models and makes data accessible via an OPC UA Server.
+The main goal of the task is to read some relevant data from the PLC and have it accessible to other applications with a standardized information model using OPC UA companion specifications. The IIH maps data from the PLC to those models and makes data accessible via an OPC UA Server.
 To read data from the PLC two options are demonstrated: 
 1. OPC UA Connector (Databus)
 2. SIMATIC S7+ Connector (Connectivity Suite)     
@@ -36,7 +36,6 @@ To read data from the PLC two options are demonstrated:
   - Common Configurator
   - Common Import Converter 
   - Databus
-  - IIH Essentials
   - IIH Semantics 
   - OPC UA Connector
   - Registry Service
@@ -60,7 +59,6 @@ Industrial Edge:
 - Common Configurator V1.8.0
 - Common Import Converter V2.0.0-1
 - Databus V2.2.0
-- IIH Essentials V1.8.0
 - IIH Semantics V1.8.0
 - OPC UA Connector V2.0.0-1
 - Registry Service V1.8.0-4
