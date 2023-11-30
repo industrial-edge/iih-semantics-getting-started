@@ -1,7 +1,7 @@
-# Industrial Information Hub (IIH) Getting Started
+# Industrial Information Hub (IIH Semantics) Getting Started
 This repository contains the source files to build the Industrial Information Hub Getting Started example.
 
-- [Industrial Information Hub (IIH) Getting Started](#industrial-information-hub-iih-getting-started)
+- [Industrial Information Hub (IIH Semantics) Getting Started](#industrial-information-hub-iih-semantics-getting-started)
   - [Description](#description)
     - [Overview](#overview)
     - [General Task](#general-task)
