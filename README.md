@@ -52,7 +52,7 @@ TIA and PLC:
   
 Industrial Edge:
 - Industrial Edge Management App V1.13.10
-- Databus Configurator V2.2.0
+- Databus Configurator V3.2.3
 - Common Connector Configurator V3.2.3
 - Industrial Edge OS V3.0.0-51
 - Common Configurator V2.3.0
