@@ -36,6 +36,9 @@ This apps allows the configuration of the IIH.
 2. Go to the **Settings** tab and add the Databus credentials for **Data Publisher settings** and **Data Subscriber settings**. Make sure that the default Databus Service name (ie-databus:1883) is also entered.   
 ![IIH Databus_PubCred](graphics/iih_databus_pub_credentials.png)
 
+3. Go to `IIH Essentials>Settings> Databus setting` and enter the same credentials.
+![IIH Databus_IIH_Essential](graphics/iihessentials_databus_settings.png)
+
 ## Configure PLC Connections
 To retrieve relevant data from the PLCs to the Edge Device, several connectors are available. The IIH forms a central integration layer where all connector data can be standardized and mapped onto a data model. For this example, we will use the OPC UA Connector and the SIMATIC S7+ Connector.
 
