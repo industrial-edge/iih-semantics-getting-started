@@ -52,7 +52,7 @@ In your IED open the Common Configurator.
 2. Go to **Tags** and click on **Add data source**. 
 ![S7Conf2](graphics/iih_s7_conf2.png)
 
-1. Select the communication protocol and the option **Add manually** if you want to use Browsing later on or **Add from file** for preconfigured tags (This guide uses **Add manually**). Fill out the **Name** and **PLC IP address**.
+1. Select the communication protocol and the option **Add manually** if you want to use Browsing later on or **Add from file** [**Export.zip**](../src/Export.zip) for preconfigured tags (This guide shows **Add manually**). Afterwards fill out the **Name** and **PLC IP address**.  
 ![S7Conf3](graphics/iih_s7_conf3.png)
 
 1. After saving you Data Source Configuration click on **Browse tags** and **.
