@@ -1,16 +1,14 @@
 # Installation
 - [Installation](#installation)
   - [Configure PLCs with TIA Portal](#configure-plcs-with-tia-portal)
+  - [Configure Databus Settings](#configure-databus-settings)
+    - [Configure Common Configurator](#configure-common-configurator)
   - [Configure PLC Connections](#configure-plc-connections)
     - [Option 1: SIMATIC S7+ Connector](#option-1-simatic-s7-connector)
       - [Common Import Converter](#common-import-converter)
-      - [Configure Common Configurator](#configure-common-configurator)
     - [Option 2: OPC UA Connector](#option-2-opc-ua-connector)
       - [Common Import Converter](#common-import-converter-1)
-      - [Registry Service](#registry-service)
-      - [Configure Databus](#configure-databus)
       - [Configure OPC UA Connector](#configure-opc-ua-connector)
-      - [Configure Common Configurator](#configure-common-configurator-1)
   - [Import OPC UA Model](#import-opc-ua-model)
     - [Import a Companion Specification](#import-a-companion-specification)
     - [Import the OPC UA model](#import-the-opc-ua-model)
@@ -20,11 +18,28 @@
   - [Creating Asset Model](#creating-asset-model)
   
 ## Configure PLCs with TIA Portal
-For this tutorial two PLCs will be used that each demonstrate one line of a production plant. The TIA project can be found [here](https://github.com/industrial-edge/miscellaneous/blob/main/tank%20application/tia-tank-application.zap16). Please adjust the IP adresses to your enviroment, download the project to two PLCs and start them up. A simulation of a filling line will be excecuted automatically.
+For this tutorial two PLCs will be used that each demonstrate one line of a production plant. The TIA project can be found [here](https://github.com/industrial-edge/miscellaneous/blob/main/tank%20application/tia-tank-application.zap19). Please adjust the IP adresses to your enviroment, download the project to two PLCs and start them up. A simulation of a filling line will be excecuted automatically.
+
+## Configure Databus Settings
+1. Go to the IEM and open the Databus Configurator in the **Data Connections** section.
+   
+2. Create a new user and assign the topic `ie/#` with permission `Publish and Subscribe`.   
+![DatabusConfig](graphics/DatabusConfig.png)
+
+3. **Deploy** the configuration.
+
+### Configure Common Configurator
+This apps allows the configuration of the IIH. 
+
+1. In your IED open the Common Configurator.
+
+2. Go to the **Settings** tab and add the Databus credentials for **Data Publisher settings** and **Data Subscriber settings**. Make sure that the default Databus Service name (ie-databus:1883) is also entered.   
+![IIH Databus_PubCred](graphics/iih_databus_pub_credentials.png)
 
 ## Configure PLC Connections
 To retrieve relevant data from the PLCs to the Edge Device, several connectors are available. The IIH forms a central integration layer where all connector data can be standardized and mapped onto a data model. For this example, we will use the OPC UA Connector and the SIMATIC S7+ Connector.
 
+  
 ### Option 1: SIMATIC S7+ Connector
 The SIMATIC S7+ Connector reads data from the PLC and then the IIH app will collect it. To get the relevant information from the PLC we can export the tags from the TIA Portal project using [SIMATIC SCADA Export for TIA Portal](https://support.industry.siemens.com/cs/ww/en/view/109748955).
 
@@ -42,33 +57,6 @@ In order to build this infrastructure, we need to have installed the following c
 #### Common Import Converter
 The Common Import Converter converts the exported file (Export.zip) into a SIMATIC S7+ Connector configuration.
 
-
-#### Configure Common Configurator
-In your IED open the Common Configurator.
-
-1. Go to **Get Data -> Connector Configuration** and click inside the **SIMATIC S7+ Connector** box. 
-![S7Conf1](graphics/iih_s7_conf1.png)
-
-2. Go to **Tags** and click on **Add data source**. 
-![S7Conf2](graphics/iih_s7_conf2.png)
-
-1. Select the communication protocol and the option **Add manually**, ff you want to use Browsing later on. Select **Add from file** [**Export.zip**](../src/Export.zip) for preconfigured tags (This guide shows **Add manually**). Afterwards fill out the **Name** and **PLC IP address**.  
-![S7Conf3](graphics/iih_s7_conf3.png)
-
-1. After saving you Data Source Configuration click on **Browse tags**.
-![S7Conf4](graphics/iih_s7_conf4.png)
-   
-1. Select all the tags needed, choose the Acquisition Cycle, the Access Mode and click on **Save for import** and then **Add to Data Source**.  
-![S7Conf5](graphics/iih_s7_conf5.png)
-
-1. Click on **Deploy**.  
-![S7Conf6](graphics/iih_s7_conf6.png)  
-Afterwards the Tags are deployed and both the Connector and PLC should be green.
-![S7Conf6_2](graphics/iih_s7_conf6_2.png)
-
-1. Monitor the connection status in the **Connector Configuration** tab.  
-![S7Conf7](graphics/iih_s7_conf7.png)
-
 ### Option 2: OPC UA Connector
 The OPC UA Connector reads data from the PLCs OPC UA Server and sends data to the Databus where the IIH app will collect it.
 
@@ -83,21 +71,9 @@ In order to build this infrastructure, we need the following connectors and apps
 #### Common Import Converter
 The Common Import Converter converts the configuration deployed by the OPC UA Connector Configurator into a OPC UA Connector configuration.
 
-#### Registry Service
-This app needs to be installed on the IED. It allows service registration and service discovery for connectors and related components.
-
-#### Configure Databus
-1. Go to the IEM and open the Databus Configurator in the **Data Connections** section.
-   
-2. Create a new user and assign the topic `ie/#` with permission `Publish and Subscribe`.   
-![DatabusConfig](graphics/DatabusConfig.png)
-
-3. **Deploy** the configuration.
 
 #### Configure OPC UA Connector
-1. In your IEM, go to **Data Connections** and launch the **OPC UA Connector configurator**.
-
-2. Go to the settings menu, where you can fill in the Databus user you just created:   
+2. Go to **Get Data -> Connector Configuration** and click inside the **OPC UA Connector** box.  
 ![OPCUAConfig1](graphics/OPCUAConfig1.png)  
 
 3. Add a new data source.  
@@ -109,14 +85,6 @@ This app needs to be installed on the IED. It allows service registration and se
 1. **Deploy** the configuration.
 
 If you don't want to perform all these steps manually, you can import this [configuration file](../src/opcuaconnector.json).
-
-#### Configure Common Configurator
-This apps allows the configuration of the IIH. 
-
-1. In your IED open the Common Configurator.
-
-2. Go to the **Settings** tab and add the Databus credentials for **Data Publisher settings** and **Data Subscriber settings**. Make sure that the default Databus Service name (ie-databus:1883) is also entered.   
-![IIH Databus_PubCred](graphics/iih_databus_pub_credentials.png)
 
 
 ## Import OPC UA Model
