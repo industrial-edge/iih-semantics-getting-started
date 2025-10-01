@@ -91,7 +91,8 @@ It is possible to check that using the UA Expert:
 You can find further documentation and help in the following links:
 
 - [Industrial Edge Hub](https://iehub.eu1.edge.siemens.cloud/#/documentation)
-- [Industrial Edge Forum](https://www.siemens.com/industrial-edge-forum)
+- [Industrial Edge Forum - Mendix](https://forum.industrial-edge.siemens.cloud)
+- [Industrial Edge Technical Forum - Sieportal](https://www.siemens.com/industrial-edge-forum)
 - [Industrial Edge landing page](https://new.siemens.com/global/en/products/automation/topic-areas/industrial-edge/simatic-edge.html)
 - [Industrial Edge GitHub page](https://github.com/industrial-edge)
 - [OPC UA Online Reference](https://reference.opcfoundation.org/)
