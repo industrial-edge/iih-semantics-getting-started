@@ -52,10 +52,10 @@ In your IED open the Common Configurator.
 2. Go to **Tags** and click on **Add data source**. 
 ![S7Conf2](graphics/iih_s7_conf2.png)
 
-1. Select the communication protocol and the option **Add manually** if you want to use Browsing later on or **Add from file** [**Export.zip**](../src/Export.zip) for preconfigured tags (This guide shows **Add manually**). Afterwards fill out the **Name** and **PLC IP address**.  
+1. Select the communication protocol and the option **Add manually**, ff you want to use Browsing later on. Select **Add from file** [**Export.zip**](../src/Export.zip) for preconfigured tags (This guide shows **Add manually**). Afterwards fill out the **Name** and **PLC IP address**.  
 ![S7Conf3](graphics/iih_s7_conf3.png)
 
-1. After saving you Data Source Configuration click on **Browse tags** and **.
+1. After saving you Data Source Configuration click on **Browse tags**.
 ![S7Conf4](graphics/iih_s7_conf4.png)
    
 1. Select all the tags needed, choose the Acquisition Cycle, the Access Mode and click on **Save for import** and then **Add to Data Source**.  
@@ -103,7 +103,7 @@ This app needs to be installed on the IED. It allows service registration and se
 3. Add a new data source.  
 ![OPCUA DataSource](graphics/opcua_datasource.png)
 
-4. After adding the PLC, click on the browse symbol and add the following variables to your configuration:   
+4. Select all the tags needed, choose the Acquisition Cycle, the Access Mode and click on **Save for import** and then **Add to Data Source**.
 ![OPCUA Tags](graphics/opcua_tags.png)
 
 1. **Deploy** the configuration.
@@ -148,10 +148,10 @@ In your IED open the Common Configurator.
 ### Import the OPC UA model
 The model is an instance of the standardized information that is defined in the companion specification.
 
-1. Select **Add model** again.   
+1. Select **Add/Import** again.   
 ![IIH_AddInstance](graphics/iih_addmodel_instance.png)
 
-2. Select **Load from file** again.   
+1. Select **Load from file** again.   
 ![IIH_LoadInstance](graphics/iih_load_instance.png)
 
 1. Load the [TankModelNodeset.xml](../src/TankModelNodeset.xml) and select the namespace `http://siemens.com/machine/demo`. If you want to use the GraphQL API, please also select the checkbox here.    
@@ -165,12 +165,12 @@ To connect the OPC UA model with the actual values open the Common Configurator 
 ### Option 1: SIMATIC S7+ Connector Mapping
 1. Go to **Define Data -> Organize**
    
-2. Select **OPC UA** and the namespace for the model in the respective dropdown menus on the right side of the window.  
-   
-3. On the left side you should see the **Data Sources**. Select **SIMATIC S7+ Connector** from the dropdown menu.   
+2. Select **OPC UA** and the namespace for the model in the respective dropdown menus on the left side of the window.    
 ![IIH_s7mapping](graphics/iih_s7_mapping.png)
 
-4. Drag and drop tags from the left window into the OPC UA model.  
+3. Click **Click to set** to open the **Data Sources** Menu. Select **SIMATIC S7+ Connector** from the dropdown menu.   
+
+4. Drag and drop tags from the right window into the OPC UA model.  
 ![IIH_s7mapping_deploy](graphics/iih_s7_mapping_datasource.png)
 
 1. **Deploy** the changes.   
