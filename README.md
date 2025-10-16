@@ -39,6 +39,7 @@ To read data from the PLC two options are demonstrated:
   - IIH Semantics 
   - OPC UA Connector
   - SIMATIC S7+ Connector
+  - IIH Essentials (optional - for creating and managing Assets/Attributes)
 - IED is connected to PLCs
 - OPC UA model created with SiOME using a Companion Specification
 
