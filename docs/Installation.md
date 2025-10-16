@@ -36,7 +36,7 @@ This apps allows the configuration of IIH.
 2. Go to the **Settings** tab and add Databus credentials for **Data Publisher settings** and **Data Subscriber settings**. Make sure that the default Databus Service name (ie-databus:1883) is also entered.   
 ![IIH Databus_PubCred](graphics/iih_databus_pub_credentials.png)
 
-1. Go to `IIH Essentials>Settings> Databus setting` and enter the same credentials.
+1. Go to `IIH Essentials>Settings> Databus setting` and enter the same credentials. (If you already configured Databus Settings over Common Configurator, this step isn't needed)
 ![IIH Databus_IIH_Essential](graphics/iihessentials_databus_settings.png)
 
 ## Configure PLC Connections
