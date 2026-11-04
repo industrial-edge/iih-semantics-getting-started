@@ -34,7 +34,6 @@ To read data from the PLC two options are demonstrated:
 - Installed Configurators for Databus and OPC UA Connector (Common Connector Configurator)
 - Installed Apps:
   - Common Configurator
-  - Common Import Converter 
   - Databus
   - IIH Semantics 
   - OPC UA Connector
@@ -45,23 +44,21 @@ To read data from the PLC two options are demonstrated:
 
 ### Used components
 TIA and PLC:
-- TIA Portal V19
+- TIA Portal V21
 - PLC: CPU 1518-4 PN/DP ODK
 - SIMATIC SCADA Export V19
 - Siemens OPC UA modeling Editor (SiOME) V2.5.12
 - UA Expert 1.7.2
   
 Industrial Edge:
-- Industrial Edge Management App V1.13.10
-- Industrial Edge OS V3.0.0-51
-- Databus Configurator V3.2.3
-- Common Connector Configurator V2.0.0
-- Common Configurator V2.3.0
-- Common Import Converter V3.0.0
-- Databus V3.2.3
-- IIH Semantics V2.3.0
-- OPC UA Connector V2.3.2-11
-- SIMATIC S7+ Connector V2.0.0
+- Industrial Edge Management App V2.3.2
+- Industrial Edge OS V1.28.1-2-b
+- Databus Configurator V4.0.0
+- Common Configurator V2.6.0
+- Databus V4.0.0
+- IIH Semantics V2.6.1
+- OPC UA Connector V2.4.4
+- SIMATIC S7+ Connector V2.5.0
 
 ### TIA Project
 The application example is based on the filling bottles example:
