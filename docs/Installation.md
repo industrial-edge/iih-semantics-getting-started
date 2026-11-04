@@ -5,9 +5,7 @@
     - [Configure Common Configurator](#configure-common-configurator)
   - [Configure PLC Connections](#configure-plc-connections)
     - [Option 1: SIMATIC S7+ Connector](#option-1-simatic-s7-connector)
-      - [Common Import Converter](#common-import-converter)
     - [Option 2: OPC UA Connector](#option-2-opc-ua-connector)
-      - [Common Import Converter](#common-import-converter-1)
       - [Configure OPC UA Connector](#configure-opc-ua-connector)
   - [Import OPC UA Model](#import-opc-ua-model)
     - [Import a Companion Specification](#import-a-companion-specification)
@@ -53,12 +51,9 @@ A file [**Export.zip**](../src/Export.zip) is created. This file is available in
 In order to build this infrastructure, we need to have installed the following connectors and apps:
 
 - Common Configurator
-- Common Import Converter
+- Databus
 - IIH Semantics
 - SIMATIC S7+ Connector
-
-#### Common Import Converter
-Common Import Converter converts exported file (Export.zip) into a SIMATIC S7+ Connector configuration.
 
 ### Option 2: OPC UA Connector
 OPC UA Connector reads data from the PLCs OPC UA Server and sends data to Databus, where IIH will collect it.
@@ -66,14 +61,9 @@ OPC UA Connector reads data from the PLCs OPC UA Server and sends data to Databu
 In order to build this infrastructure, we need the following connectors and apps:
 
 - Common Configurator
-- Common Import Converter
 - Databus
 - IIH Semantics
 - OPC UA Connector
-
-#### Common Import Converter
-Common Import Converter converts the configuration deployed by OPC UA Connector Configurator into a OPC UA Connector configuration.
-
 
 #### Configure OPC UA Connector
 1. Go to **Get Data -> Connector Configuration** and click inside **OPC UA Connector** box.  
