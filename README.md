@@ -38,31 +38,30 @@ To read data from the PLC two options are demonstrated:
   - Databus
   - IIH Semantics 
   - OPC UA Connector
-  - Registry Service
   - SIMATIC S7+ Connector
+  - IIH Essentials (optional - for creating and managing Assets/Attributes)
 - IED is connected to PLCs
 - OPC UA model created with SiOME using a Companion Specification
 
 ### Used components
 TIA and PLC:
-- TIA Portal V16
-- PLC: CPU 1511 FW 2.8.3
-- SIMATIC SCADA Export V16
+- TIA Portal V19
+- PLC: CPU 1518-4 PN/DP ODK
+- SIMATIC SCADA Export V19
 - Siemens OPC UA modeling Editor (SiOME) V2.5.12
-- UA Expert 1.6.3
+- UA Expert 1.7.2
   
 Industrial Edge:
 - Industrial Edge Management App V1.13.10
-- Databus Configurator V2.2.0
-- Common Connector Configurator V1.9.0-11
-- Industrial Edge Virtual Device V1.12.0.3-a
-- Common Configurator V1.8.0
-- Common Import Converter V2.0.0-1
-- Databus V2.2.0
-- IIH Semantics V1.8.0
-- OPC UA Connector V2.0.0-1
-- Registry Service V1.8.0-4
-- SIMATIC S7+ Connector V1.2.0-2
+- Industrial Edge OS V3.0.0-51
+- Databus Configurator V3.2.3
+- Common Connector Configurator V2.0.0
+- Common Configurator V2.3.0
+- Common Import Converter V3.0.0
+- Databus V3.2.3
+- IIH Semantics V2.3.0
+- OPC UA Connector V2.3.2-11
+- SIMATIC S7+ Connector V2.0.0
 
 ### TIA Project
 The application example is based on the filling bottles example:
@@ -83,17 +82,18 @@ It is possible to check that using the UA Expert:
 1. Connect to port `62520` of your IED to reach the IIH OPC UA Server.  
 ![UA Expert Server Configuration](docs/graphics/uaexpert_server.png)
 
-2. Authenticate with default username `iihcore` and password `iihcore`.   
+2. Use the Authentication methods configured under `Common Configurator>Settings>OPC UA`. If nothing is configured **Anonymous** is the default Setting.   
 ![UA Expert Server Auth](docs/graphics/uaexpert_auth_settings.png)
 
-3. Browse the OPC UA Server Model and display data.   
+1. Click on **Connect Server**. To display data, drag and drop Attributes you want to monitor.
 ![UA Expert Browse](docs/graphics/uaexpert_browse.png)
 
 ## Documentation
 You can find further documentation and help in the following links:
 
 - [Industrial Edge Hub](https://iehub.eu1.edge.siemens.cloud/#/documentation)
-- [Industrial Edge Forum](https://www.siemens.com/industrial-edge-forum)
+- [Industrial Edge Forum - Mendix](https://forum.industrial-edge.siemens.cloud)
+- [Industrial Edge Technical Forum - Sieportal](https://www.siemens.com/industrial-edge-forum)
 - [Industrial Edge landing page](https://new.siemens.com/global/en/products/automation/topic-areas/industrial-edge/simatic-edge.html)
 - [Industrial Edge GitHub page](https://github.com/industrial-edge)
 - [OPC UA Online Reference](https://reference.opcfoundation.org/)
