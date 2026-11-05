@@ -34,6 +34,7 @@ To read data from the PLC two options are demonstrated:
 - Installed Configurators for Databus and OPC UA Connector (Common Connector Configurator)
 - Installed Apps:
   - Common Configurator
+  - Common Import Converter
   - Databus
   - IIH Semantics 
   - OPC UA Connector
@@ -55,6 +56,7 @@ Industrial Edge:
 - Industrial Edge OS V1.28.1-2-b
 - Databus Configurator V4.0.0
 - Common Configurator V2.6.0
+- Common Import Converter v3.2.0
 - Databus V4.0.0
 - IIH Semantics V2.6.1
 - OPC UA Connector V2.4.4
