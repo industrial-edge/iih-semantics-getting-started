@@ -51,6 +51,7 @@ A file [**Export.zip**](../src/Export.zip) is created. This file is available in
 In order to build this infrastructure, we need to have installed the following connectors and apps:
 
 - Common Configurator
+- Common Import Converter
 - Databus
 - IIH Semantics
 - SIMATIC S7+ Connector
