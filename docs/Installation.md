@@ -56,6 +56,14 @@ In order to build this infrastructure, we need to have installed the following c
 - IIH Semantics
 - SIMATIC S7+ Connector
 
+In the CC go to Get data and using the S7+ Conncetor add a new data source and add from file
+
+![SimaticScadaExport](graphics/Browse-file.png)
+
+Select the .zip file generated from the exported Simatic SCADA and Continue to "Select tags"
+
+![SimaticScadaExport](graphics/Add-Data-Source.png)
+
 ### Option 2: OPC UA Connector
 OPC UA Connector reads data from the PLCs OPC UA Server and sends data to Databus, where IIH will collect it.
 
