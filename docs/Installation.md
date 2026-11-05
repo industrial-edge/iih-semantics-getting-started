@@ -5,9 +5,7 @@
     - [Configure Common Configurator](#configure-common-configurator)
   - [Configure PLC Connections](#configure-plc-connections)
     - [Option 1: SIMATIC S7+ Connector](#option-1-simatic-s7-connector)
-      - [Common Import Converter](#common-import-converter)
     - [Option 2: OPC UA Connector](#option-2-opc-ua-connector)
-      - [Common Import Converter](#common-import-converter-1)
       - [Configure OPC UA Connector](#configure-opc-ua-connector)
   - [Import OPC UA Model](#import-opc-ua-model)
     - [Import a Companion Specification](#import-a-companion-specification)
@@ -34,7 +32,7 @@ This apps allows the configuration of IIH.
 1. In your IED open Common Configurator.
 
 2. Go to the **Settings** tab and add Databus credentials for **Data Publisher settings** and **Data Subscriber settings**. Make sure that the default Databus Service name (ie-databus:1883) is also entered.   
-![IIH Databus_PubCred](graphics/iih_databus_pub_credentials.png)
+![IIH Databus_PubCred](graphics/Databus_Credentials_CC.png)
 
 1. Go to `IIH Essentials>Settings> Databus setting` and enter the same credentials. (If you already configured Databus Settings over Common Configurator, this step isn't needed)
 ![IIH Databus_IIH_Essential](graphics/iihessentials_databus_settings.png)
@@ -54,11 +52,17 @@ In order to build this infrastructure, we need to have installed the following c
 
 - Common Configurator
 - Common Import Converter
+- Databus
 - IIH Semantics
 - SIMATIC S7+ Connector
 
-#### Common Import Converter
-Common Import Converter converts exported file (Export.zip) into a SIMATIC S7+ Connector configuration.
+In the CC go to Get data and using the S7+ Conncetor add a new data source and add from file
+
+![SimaticScadaExport](graphics/Browse-file.png)
+
+Select the .zip file generated from the exported Simatic SCADA and Continue to "Select tags"
+
+![SimaticScadaExport](graphics/Add-Data-Source.png)
 
 ### Option 2: OPC UA Connector
 OPC UA Connector reads data from the PLCs OPC UA Server and sends data to Databus, where IIH will collect it.
@@ -66,14 +70,9 @@ OPC UA Connector reads data from the PLCs OPC UA Server and sends data to Databu
 In order to build this infrastructure, we need the following connectors and apps:
 
 - Common Configurator
-- Common Import Converter
 - Databus
 - IIH Semantics
 - OPC UA Connector
-
-#### Common Import Converter
-Common Import Converter converts the configuration deployed by OPC UA Connector Configurator into a OPC UA Connector configuration.
-
 
 #### Configure OPC UA Connector
 1. Go to **Get Data -> Connector Configuration** and click inside **OPC UA Connector** box.  
@@ -108,7 +107,7 @@ From SiOME, two nodesets were exported, one for the companion specification and 
 In your IED open Common Configurator.
 
 1. In **Manage Data -> OPC UA Server** select **Add/Import**.   
-![IIH_CreateModel](graphics/iih_create_model.png)
+![IIH_CreateModel](graphics/OPC-Server-Creation.png)
 
 1. Select **Load from file**.   
 ![IIH_LoadCompanionSpec](graphics/iih_load_comp_spec.png)
@@ -120,7 +119,7 @@ In your IED open Common Configurator.
 The model is an instance of the standardized information that is defined in companion specification.
 
 1. Select **Add/Import** again.   
-![IIH_AddInstance](graphics/iih_addmodel_instance.png)
+![IIH_AddInstance](graphics/OPC-Model-Creation.png)
 
 1. Select **Load from file** again.   
 ![IIH_LoadInstance](graphics/iih_load_instance.png)
