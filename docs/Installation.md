@@ -107,7 +107,7 @@ From SiOME, two nodesets were exported, one for the companion specification and 
 In your IED open Common Configurator.
 
 1. In **Manage Data -> OPC UA Server** select **Add/Import**.   
-![IIH_CreateModel](graphics/iih_create_model.png)
+![IIH_CreateModel](graphics/OPC-Server-Creation.png)
 
 1. Select **Load from file**.   
 ![IIH_LoadCompanionSpec](graphics/iih_load_comp_spec.png)
@@ -119,7 +119,7 @@ In your IED open Common Configurator.
 The model is an instance of the standardized information that is defined in companion specification.
 
 1. Select **Add/Import** again.   
-![IIH_AddInstance](graphics/iih_addmodel_instance.png)
+![IIH_AddInstance](graphics/OPC-Model-Creation.png)
 
 1. Select **Load from file** again.   
 ![IIH_LoadInstance](graphics/iih_load_instance.png)
