@@ -10,7 +10,6 @@ This repository contains the source files to build the Industrial Information Hu
     - [Used components](#used-components)
     - [TIA Project](#tia-project)
   - [Configuration Steps](#configuration-steps)
-  - [Usage](#usage)
   - [Documentation](#documentation)
   - [Contribution](#contribution)
   - [License and Legal Information](#license-and-legal-information)
@@ -49,7 +48,6 @@ TIA and PLC:
 - PLC: CPU 1518-4 PN/DP ODK
 - SIMATIC SCADA Export V19
 - Siemens OPC UA modeling Editor (SiOME) V2.5.12
-- UA Expert 1.7.2
   
 Industrial Edge:
 - Industrial Edge Management App V2.3.2
@@ -72,20 +70,6 @@ The application example is based on the filling bottles example:
 - [Import OPC UA Model](docs/Installation.md#import-opc-ua-model)
 - [Mapping Tags](docs/Installation.md#mapping-tags)
 - [Creating Asset Model](docs/Installation.md#creating-asset-model)
-
-## Usage
-Once the application is successfully deployed, data from the filling bottle machine is accessible via OPC UA to external OPC UA clients.
-
-It is possible to check that using the UA Expert:
-
-1. Connect to port `62520` of your IED to reach the IIH OPC UA Server.  
-![UA Expert Server Configuration](docs/graphics/uaexpert_server.png)
-
-2. Use the Authentication methods configured under `Common Configurator>Settings>OPC UA`. If nothing is configured **Anonymous** is the default Setting.   
-![UA Expert Server Auth](docs/graphics/uaexpert_auth_settings.png)
-
-1. Click on **Connect Server**. To display data, drag and drop Attributes you want to monitor.
-![UA Expert Browse](docs/graphics/uaexpert_browse.png)
 
 ## Documentation
 You can find further documentation and help in the following links:
